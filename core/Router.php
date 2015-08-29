@@ -7,6 +7,6 @@ class Router{
 	* @return array contains params
 	**/
 	static function parse($url){
-
+		$params = explode('/',$url);
 	}
 }

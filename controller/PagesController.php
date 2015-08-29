@@ -1,4 +1,4 @@
 <?php
-class PagesController{
-	
+class PagesController extends Controller{
+
 }

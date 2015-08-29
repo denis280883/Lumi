@@ -2,20 +2,27 @@
 class Controller{
 
 	public $request;
-	private $vars = array();
-	public $layout = 'default';
+	private $vars     = array();
+	public $layout 	  = 'default';
+	private $rendered = false;
 
 	function __construct($request){
 		$this->request = $request;
 	}
 
 	public function render($view){
+		if($this->rendered){ return false; }
 		extract($this->vars);
-		$view = ROOT.DS.'view'.DS.$this->request->controller.DS.$view.'.php';
+		if(strpos($view,'/')===0){
+			$view = ROOT.DS.'view'.$view.'.php';
+		}else{
+			$view = ROOT.DS.'view'.DS.$this->request->controller.DS.$view.'.php';
+		}
 		ob_start();
 		require($view);
 		$content_for_layout = ob_get_clean();
 		require ROOT.DS.'view'.DS.'layout'.DS.$this->layout.'.php';
+		$this->rendered = true;
 	}
 
 	public function set($key,$value=null) {

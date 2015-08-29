@@ -1,8 +1,9 @@
 <?php
 class Dispatcher{
 
+	var $request;
 	function __construct(){
-		echo 'lol';
+		$this->request = new Request();
  	}
 
 }

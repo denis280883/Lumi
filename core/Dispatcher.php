@@ -5,7 +5,8 @@ class Dispatcher{
 
 	function __construct(){
 		$this->request = new Request();
-		Router::parse($this->request->url);
+		Router::parse($this->request->url,$this->request);
+		print_r($this->request);
  	}
 
 }

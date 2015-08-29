@@ -15,3 +15,4 @@ class Router{
 		return true;
 	}
 }
+?>

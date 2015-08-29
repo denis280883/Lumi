@@ -1,5 +1,5 @@
 <?php
-require 'Controller.php';
-require 'Router.php';
 require 'Request.php';
+require 'Router.php';
+require 'Controller.php';
 require 'Dispatcher.php';

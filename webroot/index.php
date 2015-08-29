@@ -5,5 +5,5 @@
 
 <pre>
 	<?php print_r($_SERVER);
-	echo __FILE__; ?>
+	echo dirname(__FILE__); ?>
 </pre>

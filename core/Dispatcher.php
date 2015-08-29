@@ -7,12 +7,13 @@ class Dispatcher{
 		$this->request = new Request();
 		Router::parse($this->request->url,$this->request);
 		$controller = $this->loadController();
-		$controller->view();
+		print_r($this->request->action);
+		call_user_func_array(array($controller,$this->request->action), array());
 
  	}
 
  	function loadController(){
- 		$name = ucfirst($this->request->controller).'PagesController';
+ 		$name = ucfirst($this->request->controller).'Controller';
  		$file = ROOT.DS.'controller'.DS.$name.'.php';
  		require $file; 
  		return new $name($this->request);

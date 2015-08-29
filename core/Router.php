@@ -9,9 +9,9 @@ class Router{
 	static function parse($url,$request){
 		$usr = trim($url, '/');
 		$params = explode('/',$url);
-		$request->controller = $params[0];
-		$request->action = isset($params[1]) ? $params[1] : 'index';
-		$request->params = array_slice($params,2);
+		$request->controller = $params[1];
+		$request->action = isset($params[2]) ? $params[2] : 'index';
+		$request->params = array_slice($params,3);
 		return true;
 	}
 }

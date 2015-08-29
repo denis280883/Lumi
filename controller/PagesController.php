@@ -2,7 +2,7 @@
 class PagesController extends Controller {
 
 	function view(){
-		echo 'Vous voyez';
+		echo 'Vous avez demandé la page';
 	}
 
 }

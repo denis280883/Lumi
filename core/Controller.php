@@ -2,7 +2,8 @@
 class Controller{
 
 	public $request;
-	public $vars = array();
+	private $vars = array();
+	public $layout = 'default';
 
 	function __construct($request){
 		$this->request = $request;
@@ -14,7 +15,7 @@ class Controller{
 		ob_start();
 		require($view);
 		$content_for_layout = ob_get_clean();
-		require ROOT.DS.'view'.DS.'layout'.DS.'default.php';
+		require ROOT.DS.'view'.DS.'layout'.DS.$this->layout.'.php';
 	}
 
 	public function set($key,$value=null) {

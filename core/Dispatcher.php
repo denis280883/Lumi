@@ -8,7 +8,7 @@ class Dispatcher{
 		Router::parse($this->request->url,$this->request);
 		$controller = $this->loadController();
 		print_r($this->request->action);
-		call_user_func_array(array($controller,$this->request->action), array());
+		call_user_func_array(array($controller,$this->request->action), $this->request->params);
 
  	}
 

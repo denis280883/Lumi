@@ -12,8 +12,14 @@ class Controller{
 		extract($this->vars);
 		$view = ROOT.DS.'view'.DS.$this->request->controller.DS.$view.'.php';
 		require($view);
-		die($view);
 	}
 
+	public function set($key,$value=null) {
+		if (is_array($key)) {
+			$this->vars += $key;
+		} else{
+			$this->vars[$key] = $value;
+		}
+	}
 }
 ?>

@@ -2,7 +2,9 @@
 class PagesController extends Controller {
 
 	function view($name){
-		$this->vars['phrase'] = 'Bienvenue sur la page '.$name;
+		$this->set(array(
+			'phrase' => 'Salut',
+			'nom'	 => 'Magin'));
 		$this->render('index');
 
 	}

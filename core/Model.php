@@ -4,8 +4,10 @@ class Model{
 	static $connections = array();
 
 	public $db= 'default';
+	public $table = false;
 
 	public function __construct(){
+		// connecte base
 		$conf = Conf::$databases[$this->db];
 		if(isset(Model::$connections[$this->db])){
 			return true;
@@ -21,11 +23,16 @@ class Model{
 			}
 			
 		}
-		echo "J'ai chargé la base et je m'y suis connecté";
+		// Initialize variabls
+		if($this->table == false){
+			$this->table = strtolower(get_class($this)).'s';
+		}
 	}
 
-	public function find(){
-		
+	public function find($req){
+
+
+		die($this->table);
 	}
 	
 }

@@ -10,6 +10,12 @@ class Controller{
 		$this->request = $request;
 	}
 
+
+   /**
+	* Could to have a view
+	* @param $view File (path since view or name's view)
+    **/
+
 	public function render($view){
 		if($this->rendered){ return false; }
 		extract($this->vars);
@@ -31,6 +37,20 @@ class Controller{
 		} else{
 			$this->vars[$key] = $value;
 		}
+	}
+
+	/**
+	*Could to load model
+	*/
+	function loadModel($name){
+		$file = ROOT.DS.'model'.DS.$name.'.php';
+		require_once($file);
+		if(!isset($this->$name)){
+			$this->$name = new $name();
+		} else{
+			echo 'pas chargé';
+		}
+		
 	}
 }
 ?>

@@ -1,7 +1,7 @@
 <?php
-
-
-$databases=array(
+class Conf{
+		static $databases=array(
+			
 		'default' => array(
 		'host'		=>'localhost',
 		'database' 	=>'lumitel',
@@ -9,3 +9,6 @@ $databases=array(
 		'password'	=> ''
 		)
 	);
+
+}
+

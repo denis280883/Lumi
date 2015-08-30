@@ -38,5 +38,4 @@ class Model{
 		$pre->execute();
 		return $pre->fetchAll(PDO::FETCH_OBJ);
 	}
-	
 }

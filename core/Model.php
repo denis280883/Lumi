@@ -7,7 +7,9 @@ class Model{
 
 	public function __construct(){
 		$conf = Conf::$databases[$this->db];
-
+		if(isset(Model::$connections[$this->db])){
+			return true;
+		}
 		try {
 			$pdo = new PDO('mysql:host='.$conf['host'].';dbname='.$conf['database'].';',$conf['login'],$conf['password']);
 			Model::$connections[$this->db] = $pdo;

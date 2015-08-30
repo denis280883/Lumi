@@ -1,9 +1,10 @@
 <?php
 class Model{
 	
+	public $db= 'default';
+
 	public function __construct(){
-		global $databases;
-		print_r($databases);
+		print_r(Conf::$databases[$this->db]);
 	}
 
 	public function find(){

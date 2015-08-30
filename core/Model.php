@@ -34,6 +34,10 @@ class Model{
 
 	public function find($req){
 		$sql = 'SELECT * FROM '.$this->table.' as '.get_class($this).'';
+		if(isset($req['conditions'])){
+			$sql .='WHERE '.$req['conditions'];
+		}
+		die($sql);
 		$pre = $this->db->prepare($sql);
 		$pre->execute();
 		return $pre->fetchAll(PDO::FETCH_OBJ);

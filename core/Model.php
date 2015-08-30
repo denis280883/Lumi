@@ -8,7 +8,12 @@ class Model{
 		try {
 			$db = new PDO('mysql:host='.$conf['host'].';dbname='.$conf['database'].';',$conf['login'],$conf['password']);
 		}catch(PDOException $e){
-			die(print_r($e,true));
+			if (conf::$debug >= 1){
+				die($e->getMessage());
+			}else {
+				die('Impossible de se connecter à la base de donnée');
+			}
+			
 		}
 	}
 

@@ -50,7 +50,9 @@ class Model{
 			}else{
 				$cond = array();
 				foreach($req['conditions'] as $k=>$v){
-					$v = $this->db->quote($v);//mysql_escape_string($v);
+					if(!is_numeric($v)){
+						$v = '"'.$this->db->quote($v).'"';//mysql_escape_string($v);
+					}
 					$cond[] = "$k=$v";
 				}
 				$sql .= implode(' AND ', $cond);

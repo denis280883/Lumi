@@ -12,7 +12,8 @@
                 <div class="container">
                     <h3><a href="#">Mon site</a></h3>
                     <ul class="nav">
-                      <?php foreach ($pages as $p): ?>
+                      <?php $pagesMenu = $this->request('Pages', 'getMenu'); ?>
+                      <?php foreach($pagesMenu as $p):?>
                             <li><a href="<?php echo BASE_URL.'/pages/view/'.$p->id; ?>" title="<?php echo $p->name; ?>"><?php echo $p->name; ?></a></li>
                       <?php endforeach; ?>   
                     </ul>

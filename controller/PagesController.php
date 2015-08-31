@@ -10,11 +10,17 @@ class PagesController extends Controller {
 		if(empty($d['page'])){
 			$this->e404('Page introuvable!!!');
 		}
-		$d['pages'] = $this->Post->find(array(
-			'conditions' => array('type'=>'page')
-		));
-
 		$this->set($d);
+	}
+
+	/**
+	* Could get pages menu
+	**/
+	function getMenu(){
+		$this->loadModel('Post');
+		$this->Post->Find(array(
+			'conditions' => array('online' => 1, 'type'=>'page')
+			));
 	}
 
 

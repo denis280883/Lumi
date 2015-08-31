@@ -8,6 +8,11 @@ class Model{
 	public $db;
 
 	public function __construct(){
+		// Initialize variabls
+		if($this->table == false){
+			$this->table = strtolower(get_class($this)).'s';
+		}
+		
 		// connecte base
 		$conf = Conf::$databases[$this->conf];
 		if(isset(Model::$connections[$this->conf])){
@@ -33,10 +38,7 @@ class Model{
 			}
 			
 		}
-		// Initialize variabls
-		if($this->table == false){
-			$this->table = strtolower(get_class($this)).'s';
-		}
+
 	}
 
 	public function find($req){

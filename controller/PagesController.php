@@ -6,6 +6,9 @@ class PagesController extends Controller {
 		$post = $this->Post->findFirst(array(
 			'conditions' => 'id='.$id
 		));
+		if(empty($post)){
+			$this->e404('Page introuvable');
+		}
 		$this->set('post',$post);
 	}
 

@@ -16,11 +16,8 @@ class Dispatcher{
  	}
 
  	function error($message){
- 		header("HTTP/1.0 404 Not Found");
 		$controller = new Controller($this->request);
-		$controller->set('message',$message);
-		$controller->render('/errors/404');
-		die();
+		$controller->e404($message);
 	}
 
  	function loadController(){

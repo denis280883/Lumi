@@ -21,6 +21,8 @@ class Model{
 				$conf['password'],
 				array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8')
 			);
+			$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_WARNING);
+
 			Model::$connections[$this->conf] = $pdo;
 			$this->db = $pdo;
 		}catch(PDOException $e){
@@ -39,9 +41,24 @@ class Model{
 
 	public function find($req){
 		$sql = 'SELECT * FROM '.$this->table.' as '.get_class($this).' ';
+
+		// Constructor of condition
 		if(isset($req['conditions'])){
-			$sql .='WHERE '.$req['conditions'];
+			$sql .='WHERE ';
+			if(!is_array($req['conditions'])){
+				$sql .=$req['conditions'];
+			}else{
+				$cond = array();
+				foreach($req['conditions'] as $k=>$v){
+					$v = $this->db->quote($v);//mysql_escape_string($v);
+					$cond[] = "$k=$v";
+				}
+				$sql .= implode(' AND ', $cond);
+			}
 		}
+
+		die($sql);
+
 		$pre = $this->db->prepare($sql);
 		$pre->execute();
 		return $pre->fetchAll(PDO::FETCH_OBJ);

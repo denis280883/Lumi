@@ -3,11 +3,10 @@ class PagesController extends Controller {
 
 	function view($id){
 		$this->loadModel('Post');
-		$posts = $this->Post->find(array(
+		$post = $this->Post->findFirst(array(
 			'conditions' => 'id=1'
-
 		));
-		print_r($posts);
+		$this->set('post',$post);
 	}
 
 

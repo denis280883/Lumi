@@ -1,4 +1,3 @@
-<div class ="hero-unit">
-	<h1>Bienvenue</h1>
-	<p>C'est la page d'accueil</p>
-</div>
+<h1><?php echo $post->name; ?></h1>
+
+<?php echo $post->content; ?>

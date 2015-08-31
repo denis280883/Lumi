@@ -7,7 +7,22 @@
      </head> 
     <body> 
 
-        <div class="container">
+        <div class="topbar">
+            <div class="topbar-inner">
+                <div class="container">
+                    <h3><a href="#">Mon site</a></h3>
+                    <ul class="nav">
+                      <?php foreach ($pages as $p): ?>
+                            <li><a href="<?php echo BASE_URL.'/pages/'.$p->id; ?>" title="<?php echo $p->name; ?>"><?php echo $p->name; ?></a></li>
+                      <?php endforeach; ?>   
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="container"  style="padding-top:60px;">
         	<?php echo $content_for_layout; ?>
         </div>
 

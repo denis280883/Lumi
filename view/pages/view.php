@@ -1,5 +1,5 @@
-<?php $title_for_layout = $post->name; ?>
+<?php $title_for_layout = $page->name; ?>
 
-<h1><?php echo $post->name; ?></h1>
+<h1><?php echo $page->name; ?></h1>
 
-<?php echo $post->content; ?>
+<?php echo $page->content; ?>

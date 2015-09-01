@@ -6,6 +6,7 @@ class Model{
 	public $conf= 'default';
 	public $table = false;
 	public $db;
+	public $primaryKey = 'id';
 
 	public function __construct(){
 		// Initialize variabls
@@ -42,7 +43,20 @@ class Model{
 	}
 
 	public function find($req){
-		$sql = 'SELECT * FROM '.$this->table.' as '.get_class($this).' ';
+		$sql = 'SELECT ';  
+
+		if(isset($req['fields'])){
+			if(is_array($req['fields'])){
+				$sql .= implode(', ',$$req['fields']);
+			}else{
+				$sql .=$req['fields'];
+			}
+		}else{
+			$sql.='*';
+		}
+
+		$sql .= ' FROM '.$this->table.' as '.get_class($this).' ';
+		//$sql = 'SELECT * FROM '.$this->table.' as '.get_class($this).' ';
 
 		// Constructor of condition
 		if(isset($req['conditions'])){
@@ -61,7 +75,6 @@ class Model{
 				$sql .= implode(' AND ', $cond);
 			}
 		}
-
 		$pre = $this->db->prepare($sql);
 		$pre->execute();
 		return $pre->fetchAll(PDO::FETCH_OBJ);
@@ -69,5 +82,12 @@ class Model{
 
 	public function findFirst($req){
 		return current($this->find($req));
+	}
+
+	public function findCount($condition){
+		print_r($this->find(array(
+			'fields' => 'COUNT('.$this->primaryKey.')',
+			'conditions' => $condition
+			)));
 	}
 }

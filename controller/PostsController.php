@@ -8,15 +8,16 @@ class PostsController extends Controller {
 			'conditions' => array('online' => 1,
 				   'type'   =>'post')
 			));
-
 		$this->set($d);
 	}
 
 	function view($id){
 		$this->loadModel('Post');
+		$condition = array('online' => 1, 'id'=>$id, 'type'=>'post');
 		$d['post'] = $this->Post->findFirst(array(
-			'conditions' => array('online' => 1, 'id'=>$id, 'type'=>'post')
+			'conditions' => $condition
 		));
+		$d['total'] = $this->Post->findCount($condition);
 		if(empty($d['post'])){
 			$this->e404('Page introuvable!!!');
 		}

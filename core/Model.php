@@ -53,10 +53,11 @@ class Model{
 				$cond = array();
 				foreach($req['conditions'] as $k=>$v){
 					if(!is_numeric($v)){
-						$v = '"'.$this->db->quote($v).'"';
+						$v = $this->db->quote($v);
 					}
 					$cond[] = "$k=$v";
 				}
+
 				$sql .= implode(' AND ', $cond);
 			}
 		}

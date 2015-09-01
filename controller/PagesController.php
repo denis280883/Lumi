@@ -19,7 +19,7 @@ class PagesController extends Controller {
 		$this->loadModel('Post');
 		return $this->Post->find(array(
 			'conditions' => array('online' => 1, 'type'=>'page')
-			));
+			)); 
 	}
 
 

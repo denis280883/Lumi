@@ -10,7 +10,6 @@ class Controller{
 		if($request){
 			$this->request = $request;	
 		}
-		
 	}
 
 
@@ -67,7 +66,7 @@ class Controller{
 	}
 
 	/**
-	*
+	*Could call controller since a view
 	**/
 	function request($controller,$action){
 		$controller .= 'Controller';

@@ -5,8 +5,8 @@ class PagesController extends Controller {
 	function view($id){
 		$this->loadModel('Post');
 		$d['page'] = $this->Post->findFirst(array(
-			'conditions' => array('id'=>$id)
-		));
+			'conditions' => array('online' => 1, 'id'=>$id)
+		));//, 'type'=>'page')
 		if(empty($d['page'])){
 			$this->e404('Page introuvable!!!');
 		}
@@ -18,7 +18,7 @@ class PagesController extends Controller {
 	**/
 	function getMenu(){
 		$this->loadModel('Post');
-		$this->Post->Find(array(
+		return $this->Post->find(array(
 			'conditions' => array('online' => 1, 'type'=>'page')
 			));
 	}

@@ -6,7 +6,7 @@ class PostsController extends Controller {
 
 		$d['posts'] = $this->Post->find(array(
 			'conditions' => array('online' => 1,
-				   'type'   =>'page')
+				   'type'   =>'post')
 			));
 
 		$this->set($d);
@@ -15,7 +15,7 @@ class PostsController extends Controller {
 	function view($id){
 		$this->loadModel('Post');
 		$d['post'] = $this->Post->findFirst(array(
-			'conditions' => array('online' => 1, 'id'=>$id, 'type'=>'page')
+			'conditions' => array('online' => 1, 'id'=>$id, 'type'=>'post')
 		));
 		if(empty($d['post'])){
 			$this->e404('Page introuvable!!!');

@@ -2,11 +2,13 @@
 class PostsController extends Controller {
 
 	function index(){
+		$perPage = 1;
 		$this->loadModel('Post');
 		$condition = array('online' => 1, 'type' =>'post');
 
 		$d['posts'] = $this->Post->find(array(
-			'conditions' => $condition
+			'conditions' => $condition,
+			'limit' => $perPage 
 			));
 		$d['total'] = $this->Post->findCount($condition);
 		$this->set($d);

@@ -75,6 +75,12 @@ class Model{
 				$sql .= implode(' AND ', $cond);
 			}
 		}
+
+		if(isset($req['limit'])){
+			$sql .='LIMIT '.$req['limit'];
+			
+		}
+
 		$pre = $this->db->prepare($sql);
 		$pre->execute();
 		return $pre->fetchAll(PDO::FETCH_OBJ);

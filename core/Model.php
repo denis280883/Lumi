@@ -85,9 +85,10 @@ class Model{
 	}
 
 	public function findCount($condition){
-		print_r($this->find(array(
-			'fields' => 'COUNT('.$this->primaryKey.')',
+		$res = $this->findFirst(array(
+			'fields' => 'COUNT('.$this->primaryKey.') as count',
 			'conditions' => $condition
-			)));
+			));
+		return $res->count;
 	}
 }

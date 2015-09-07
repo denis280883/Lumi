@@ -3,13 +3,14 @@
     <head> 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
     <title><?php echo isset($title_for_layout)?$title_for_layout:'Mon site'; ?></title>
-    <link rel="stylesheet" href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="http://bootstrapdocs.com/v2.3.2/docs/assets/css/bootstrap.css">
      </head> 
     <body> 
 
-        <div class="topbar">
-            <div class="topbar-inner">
-                <div class="container">
+        <div class="navbar navbar-inverse navbar">
+            <div class="navbar-inner">
+                <div class="nav-collapse collapse">
+                   
                     <h3><a href="#">Mon site</a></h3>
                     <ul class="nav">
                       <?php $pagesMenu = $this->request('Pages', 'getMenu'); ?>
@@ -21,6 +22,8 @@
                 </div>
             </div>
         </div>
+
+
 
 
 

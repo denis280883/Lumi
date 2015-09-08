@@ -33,8 +33,8 @@ class Router{
 		debug($r);
 	}
 
-		/**
-	* Connect
+	/**
+	* 
 	**/
 	static function url($url){
 		foreach (self::$routes as $v) {
@@ -44,6 +44,7 @@ class Router{
 						$v['redir'] = str_replace(":$k", $w, $v['redir']);
 					}
 				}
+				echo($v['redir']);
 				return $v['redir'];
 			}
 		}

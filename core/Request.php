@@ -9,7 +9,9 @@ class Request{
 		$this->page = 1;
 		if(isset($_GET['page'])){
 			if(is_numeric($_GET['page'])){
-				$this->page = round($_GET['page']);
+				if($_GET['page']>0){
+					$this->page = round($_GET['page']);
+				}
 			}
 		}
  	}

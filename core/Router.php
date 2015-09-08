@@ -25,8 +25,9 @@ class Router{
 	static function connect($redir,$url){
 		$r = array();
 
+		
+		$r['origin'] = preg_replace('/([a-z0-9]+):([^\/]+)/','${1}:(?P<${1}>${2})',$r['origin']);
 		$r['origin'] = '/'.str_replace('/', '\/', $url).'/';
-		$r['origin'] = preg_replace('/([a-z0-9]+):(^\/+)/','${1}:(?P<${1}>${2}',$r['origin']);
 
 		self::$routes[] = $r;
 		debug($r);

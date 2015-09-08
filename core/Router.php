@@ -26,7 +26,7 @@ class Router{
 		$r = array();
 
 		$r['origin'] = '/'.str_replace('/', '\/', $url).'/';
-		$r['origin'] = preg_replace('/([a-z0-9]+):(^\/)/','${1}:(?P<${1}>${2}',$r['origin']);
+		$r['origin'] = preg_replace('/([a-z0-9]+):(^\/+)/','${1}:(?P<${1}>${2}',$r['origin']);
 
 		self::$routes[] = $r;
 		debug($r);

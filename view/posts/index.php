@@ -11,7 +11,7 @@
 <div class="pagination">
   <ul>
   <?php for ($i=1 ; $i <= $page; $i++): ?>
-    <li><a href="?page=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+    <li <?php if($i==$this->request->page) echo 'class="active"'; ?>><a href="?page=<?php echo $i; ?>"><?php echo $i; ?></a></li>
 
   <?php endfor; ?>
   </ul> 	

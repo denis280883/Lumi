@@ -1,6 +1,8 @@
 <?php
 class Router{
 
+	static $routes = array();
+
 	/**
 	*  Could to Parse an url
 	* @param $url Url to parse
@@ -21,7 +23,11 @@ class Router{
 	* Connect
 	**/
 	static function connect($redir,$url){
+		$r = array();
 
+		preg_match($url, 'aezae');
+
+		self::$routes[] = $r;
 	}
 
 		/**

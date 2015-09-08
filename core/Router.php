@@ -25,6 +25,7 @@ class Router{
 	static function connect($redir,$url){
 		$r = array();
 		
+		$r['redir'] = $redir;
 		$r['origin'] = preg_replace('/([a-z0-9]+):([^\/]+)/','${1}:(?P<${1}>${2})',$url);
 		$r['origin'] = '/'.str_replace('/', '\/', $r['origin']).'/';
 
@@ -38,10 +39,15 @@ class Router{
 	static function url($url){
 		foreach (self::$routes as $v) {
 			if(preg_match($v['origin'],$url,$match)){
-				debug($match);
+				foreach ($match as $k=>$w) {
+					if (!is_numeric($k)){
+						$v['redir'] = str_replace(":$k", $w, $v['redir']);
+					}
+				}
+				return $v['redir'];
 			}
 		}
-
+		return $url;
 	}
 
 }

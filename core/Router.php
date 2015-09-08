@@ -14,5 +14,22 @@ class Router{
 		$request->params = array_slice($params,3);
 		return true;
 	}
+
+
+
+	/**
+	* Connect
+	**/
+	static function connect($redir,$url){
+
+	}
+
+		/**
+	* Connect
+	**/
+	static function url($url){
+
+	}
+
 }
 ?>

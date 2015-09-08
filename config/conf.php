@@ -18,4 +18,4 @@ class Conf{
 
 
 
-Router:connect('post/:slug-:id', 'posts/view/id:([0-9]+)/slug:([a-z0-9\-]+)')
+Router::connect('post/:slug-:id','posts/view/id:([0-9]+)/slug:([a-z0-9\-]+)');

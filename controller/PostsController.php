@@ -8,9 +8,10 @@ class PostsController extends Controller {
 
 		$d['posts'] = $this->Post->find(array(
 			'conditions' => $condition,
-			'limit' => $perPage 
-			));
+			'limit' => ($perPage*($this->request->page-1).','.$perPage
+			)));
 		$d['total'] = $this->Post->findCount($condition);
+		$d['page'] = ceil($d['total'] / $perPage);
 		$this->set($d);
 	}
 

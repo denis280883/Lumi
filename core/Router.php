@@ -25,9 +25,10 @@ class Router{
 	static function connect($redir,$url){
 		$r = array();
 
-		preg_match($url, 'aezae');
+		$r['origin'] = '/'.str_replace('/', '\/', $url).'/';
 
 		self::$routes[] = $r;
+		debug($r);
 	}
 
 		/**

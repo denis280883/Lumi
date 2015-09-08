@@ -15,3 +15,7 @@ class Conf{
 
 }
 
+
+
+
+Router:connect('post/:slug-:id', 'posts/view/id:5/slug:mon-slug')

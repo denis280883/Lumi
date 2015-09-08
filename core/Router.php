@@ -37,7 +37,7 @@ class Router{
 	static function url($url){
 		foreach (self::$routes as $v) {
 			if(preg_match($v['origin'],$url,$match)){
-				debug('OK');
+				debug($match);
 			}
 		}
 

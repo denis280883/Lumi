@@ -11,21 +11,26 @@ class Router{
 	**/
 	static function parse($url,$request){
 		$usr = trim($url, '/');
-
-		foreach (Router::$routes as $v) {
-			if(preg_match($v['catcher'], $url,$match)){
-				$request->controller = $v['controller'];
-				$request->action = isset($match['action']) ? $match['action'] : $v['action'];
-				$request->params = array();
-				foreach ($v['params'] as $k=>$v) {
-					$request->params[$k]=$match[$k];
+		if(empty($url)){
+			$url = Router::$routes[0]['url'];
+		}else{
+			foreach (Router::$routes as $v) {
+				if(preg_match($v['catcher'], $url,$match)){
+					$request->controller = $v['controller'];
+					$request->action = isset($match['action']) ? $match['action'] : $v['action'];
+					$request->params = array();
+					foreach ($v['params'] as $k=>$v) {
+						$request->params[$k]=$match[$k];
+					}
+					if(!empty($match['args'])) {
+						$request->params += explode('/',trim($match['args'],'/'));
+					}
+					return $request;
 				}
-				if(!empty($match['args'])) {
-					$request->params += explode('/',trim($match['args'],'/'));
-				}
-				return $request;
 			}
 		}
+
+
 		$params = explode('/',$url);
 		$request->controller = $params[1];
 		$request->action = isset($params[2]) ? $params[2] : 'index';
@@ -42,7 +47,7 @@ class Router{
 	static function connect($redir,$url){
 		$r = array();
 		$r['params'] = array();
-
+		$r['url'] = $url;
 		$r['redir'] = $redir;
 		$r['origin'] = str_replace(':action','(?P<action>([a-z0-9\-]+))',$url);
 		$r['origin'] = preg_replace('/([a-z0-9]+):([^\/]+)/','${1}:(?P<${1}>${2})',$r['origin']);

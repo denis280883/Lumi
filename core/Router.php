@@ -10,6 +10,17 @@ class Router{
 	**/
 	static function parse($url,$request){
 		$usr = trim($url, '/');
+
+		foreach (Router::$routes as $v) {
+			if(preg_match($v['catcher'], $url,$match)){
+				$request->controller = $v['controller'];
+				$request->action = $v['action'];
+				foreach ($v['params'] as $k=>$v) {
+					$request->params[$k]=$match[$k];
+				}
+				return $request;
+			}
+		}
 		$params = explode('/',$url);
 		$request->controller = $params[1];
 		$request->action = isset($params[2]) ? $params[2] : 'index';
@@ -24,10 +35,32 @@ class Router{
 	**/
 	static function connect($redir,$url){
 		$r = array();
+		$r['params'] = array();
 		
 		$r['redir'] = $redir;
 		$r['origin'] = preg_replace('/([a-z0-9]+):([^\/]+)/','${1}:(?P<${1}>${2})',$url);
 		$r['origin'] = '/'.str_replace('/', '\/', $r['origin']).'/';
+
+		$params = explode('/',$url);
+		foreach ($params as $k=>$v) {
+			if(strpos($v, ':')){
+				$p = explode(':', $v);
+				$r['params'][$p[0]] = $p[1];
+			}else{
+				if($k==0){
+					$r['controller'] = $v;
+				}elseif($k==1){
+					$r['action'] = $v;
+				}
+			}
+		}
+
+		$r['catcher'] = $redir;
+		foreach ($r['params'] as $k=>$v) {
+			$r['catcher'] = str_replace(":$k", "(?P<$k>$v)", $r['catcher']);
+		}
+
+		$r['catcher'] = '/'.str_replace('/', '\/', $r['catcher']).'/';
 
 		self::$routes[] = $r;
 		debug($r);

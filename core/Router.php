@@ -1,8 +1,8 @@
 <?php
 class Router{
 
-	static $routes = array();
 
+	static $routes = array();
 
 	/**
 	*  Could to Parse an url
@@ -14,8 +14,10 @@ class Router{
 
 		foreach (Router::$routes as $v) {
 			if(preg_match($v['catcher'], $url,$match)){
+				debug($match);
 				$request->controller = $v['controller'];
-				$request->action = $v['action'];
+				$request->action = isset($match['action']) ? $match['action'] : $v['action'];
+				$request->params = array();
 				foreach ($v['params'] as $k=>$v) {
 					$request->params[$k]=$match[$k];
 				}
@@ -40,7 +42,8 @@ class Router{
 		$r['params'] = array();
 
 		$r['redir'] = $redir;
-		$r['origin'] = preg_replace('/([a-z0-9]+):([^\/]+)/','${1}:(?P<${1}>${2})',$url);
+		$r['origin'] = str_replace(':action','(?P<action>([a-z0-9\-]+))',$url);
+		$r['origin'] = preg_replace('/([a-z0-9]+):([^\/]+)/','${1}:(?P<${1}>${2})',$r['origin']);
 		$r['origin'] = '/'.str_replace('/', '\/', $r['origin']).'/';
 
 		$params = explode('/',$url);
@@ -58,7 +61,7 @@ class Router{
 		}
 
 		$r['catcher'] = $redir;
-		//$r['catcher'] = str_replace(':action','(?P<action>([a-z0-9\-]+))', $r['catcher']);
+		$r['catcher'] = str_replace(':action','(?P<action>([a-z0-9\-]+))', $r['catcher']);
 		foreach ($r['params'] as $k=>$v) {
 			$r['catcher'] = str_replace(":$k", "(?P<$k>$v)", $r['catcher']);
 		}
@@ -78,10 +81,10 @@ class Router{
 						$v['redir'] = str_replace(":$k", $w, $v['redir']);
 					}
 				}
-				return $v['redir'];//BASE_URL.'/'.$v['redir'];
+				return BASE_URL.'/'.$v['redir'];
 			}
 		}
-		return $url;//BASE_URL.'/'.$url;
+		return BASE_URL.'/'.$url;
 	}
 }
 ?>

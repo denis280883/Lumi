@@ -38,7 +38,7 @@ class Router{
 	static function connect($redir,$url){
 		$r = array();
 		$r['params'] = array();
-		
+
 		$r['redir'] = $redir;
 		$r['origin'] = preg_replace('/([a-z0-9]+):([^\/]+)/','${1}:(?P<${1}>${2})',$url);
 		$r['origin'] = '/'.str_replace('/', '\/', $r['origin']).'/';
@@ -78,7 +78,6 @@ class Router{
 						$v['redir'] = str_replace(":$k", $w, $v['redir']);
 					}
 				}
-				echo($v['redir']);
 				return $v['redir'];//BASE_URL.'/'.$v['redir'];
 			}
 		}

@@ -3,6 +3,7 @@ class Router{
 
 	static $routes = array();
 
+
 	/**
 	*  Could to Parse an url
 	* @param $url Url to parse
@@ -27,6 +28,7 @@ class Router{
 		$request->params = array_slice($params,3);
 		return true;
 	}
+
 
 
 
@@ -56,14 +58,13 @@ class Router{
 		}
 
 		$r['catcher'] = $redir;
+		//$r['catcher'] = str_replace(':action','(?P<action>([a-z0-9\-]+))', $r['catcher']);
 		foreach ($r['params'] as $k=>$v) {
 			$r['catcher'] = str_replace(":$k", "(?P<$k>$v)", $r['catcher']);
 		}
-
 		$r['catcher'] = '/'.str_replace('/', '\/', $r['catcher']).'/';
 
 		self::$routes[] = $r;
-		debug($r);
 	}
 
 	/**
@@ -78,11 +79,10 @@ class Router{
 					}
 				}
 				echo($v['redir']);
-				return $v['redir'];
+				return $v['redir'];//BASE_URL.'/'.$v['redir'];
 			}
 		}
-		return $url;
+		return $url;//BASE_URL.'/'.$url;
 	}
-
 }
 ?>

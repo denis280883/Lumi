@@ -4,5 +4,5 @@
 
 <form action="<?php echo Router::url('admin/posts/edit'); ?>">
 	<?php echo $this->Form->input('name', 'titre') ?>
-	<?php echo $this->Form->input('content', 'Contenu') ?>
+	<?php echo $this->Form->input('content', 'Contenu',array('type'=>'textarea')); ?>
 </form>

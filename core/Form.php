@@ -21,6 +21,8 @@ class Form{
 			$html .= '<input type="text" id="input'.$name.'" name="'.$name.'" value="'.$this->controller->request->data->$name.'" '.$attr.'>';
 		}elseif($options['type'] == 'textarea') {
 			$html .= '<textarea id="input'.$name.'" name="'.$name.''.$attr.'>'.$this->controller->request->data->$name.'</textarea>';
+		}elseif($options['type'] == 'checkbox') {
+			$html .= '<input type="hidden" name="'.$name.'" value="0"><input type="checkbox" name="'.$name.'" value ="1" >' ;
 		}
 		$html .= '</div></div>';
 		return $html;

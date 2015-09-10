@@ -28,7 +28,11 @@ class Dispatcher{
  		$name = ucfirst($this->request->controller).'Controller';
  		$file = ROOT.DS.'controller'.DS.$name.'.php';
  		require $file; 
- 		return new $name($this->request);
+ 		$controller = new $name($this->request);
+
+ 		$controller->Session = new Session();
+
+ 		return $controller;
  	}
 }
 ?>

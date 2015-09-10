@@ -28,6 +28,7 @@
 
 
         <div class="container"  style="padding-top:60px;">
+            <?php echo $this->Session->flash(); ?>
         	<?php echo $content_for_layout; ?>
         </div>
 

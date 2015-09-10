@@ -3,6 +3,7 @@ class Request{
 
 	public $url;	// URL call by user
 	public $page = 1;
+	public $prefix = '';
 
 	function __construct(){
 		$this->url = isset($_SERVER['PATH_INFO'])?$_SERVER['PATH_INFO']:'/';

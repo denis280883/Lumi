@@ -7,8 +7,6 @@ class Router{
 
 	static function prefix($url,$prefix){
 		self::$prefixes[$url] = $prefix;
-				debug(self::$prefixes);
-
 	}
 
 	/**
@@ -51,7 +49,7 @@ class Router{
 
 		}
 		print_r('Vide');
-					debug($params);
+
 		$request->controller = $params[0];
 		$request->action = isset($params[1]) ? $params[1] : 'index';
 		$request->params = array_slice($params,2);
@@ -71,7 +69,7 @@ class Router{
 		$r['redir'] = $redir;
 		$r['origin'] = str_replace(':action','(?P<action>([a-z0-9\-]+))',$url);
 		$r['origin'] = preg_replace('/([a-z0-9]+):([^\/]+)/','${1}:(?P<${1}>${2})',$r['origin']);
-		$r['origin'] = '/'.str_replace('/', '\/', $r['origin']).'(?P<args>\/?.*)/';
+		$r['origin'] = '/^'.str_replace('/', '\/', $r['origin']).'(?P<args>\/?.*)$/';
 
 		$params = explode('/',$url);
 		foreach ($params as $k=>$v) {
@@ -92,7 +90,7 @@ class Router{
 		foreach ($r['params'] as $k=>$v) {
 			$r['catcher'] = str_replace(":$k", "(?P<$k>$v)", $r['catcher']);
 		}
-		$r['catcher'] = '/'.str_replace('/', '\/', $r['catcher']).'(?P<args>\/?.*)/';
+		$r['catcher'] = '/^'.str_replace('/', '\/', $r['catcher']).'(?P<args>\/?.*)$/';
 
 		self::$routes[] = $r;
 	}

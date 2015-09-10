@@ -20,8 +20,7 @@ class Router{
 		$url = trim($url, '/');
 
 		if(empty($url)){
-
-			//$url = Router::$routes[0]['url'];
+			$url = Router::$routes[0]['url'];
 		}else{
 
 			foreach (Router::$routes as $v) {

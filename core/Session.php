@@ -14,7 +14,7 @@ class Session{
 
 	public function flash(){
 		if(isset($_SESSION['flash'])){
-			return $_SESSION['flash']['message'];
+			return '<div class="alert-message '.$_SESSION['flash']['type'].'"><p>'.$_SESSION['flash']['message'].'</p></div>';
 		}
 	}
 

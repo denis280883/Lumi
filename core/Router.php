@@ -40,7 +40,6 @@ class Router{
 
 
 		$params = explode('/',$url);
-		debug(self::$prefixes);
 		if(in_array($params[0],array_keys(self::$prefixes))){
 
 			$request->prefix = self::$prefixes[$params[0]];
@@ -106,7 +105,7 @@ class Router{
 						$v['redir'] = str_replace(":$k", $w, $v['redir']);
 					}
 				}
-				return BASE_URL.'/'.$v['redir'].$match['args'];
+				return BASE_URL.str_replace('//', '/', '/'.$v['redir'].$match['args']);
 			}
 		}
 		return BASE_URL.'/'.$url;

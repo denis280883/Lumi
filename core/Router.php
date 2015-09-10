@@ -47,7 +47,6 @@ class Router{
 			//array_shift($params);
 
 		}
-		print_r('Vide');
 
 		$request->controller = $params[0];
 		$request->action = isset($params[1]) ? $params[1] : 'index';

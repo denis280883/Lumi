@@ -7,12 +7,16 @@ class Dispatcher{
 		$this->request = new Request();
 		Router::parse($this->request->url,$this->request);
 		$controller = $this->loadController();
-		if(!in_array($this->request->action, array_diff(get_class_methods($controller),get_class_methods('Controller'))) ){
-			$this->error('Le controller '.$this->request->controller.' n\'a pas de méthode '.$this->request->action);
+		$action = $this->request->action;
+		if($this->request->prefix){
+			$action = $this->request->prefix.'_'.$action;
+		}
+		if(!in_array($action, array_diff(get_class_methods($controller),get_class_methods('Controller'))) ){
+			$this->error('Le controller '.$this->request->controller.' n\'a pas de méthode '.$action);
 		}
 
-		call_user_func_array(array($controller,$this->request->action), $this->request->params);
-		$controller->render($this->request->action);
+		call_user_func_array(array($controller,$action), $this->request->params);
+		$controller->render($action);
  	}
 
  	function error($message){

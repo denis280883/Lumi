@@ -104,6 +104,11 @@ class Router{
 				return BASE_URL.str_replace('//', '/', '/'.$v['redir'].$match['args']);
 			}
 		}
+		foreach (self::$prefixes as $k=>$v) {
+			if(strpos($url,$v) === 0){
+				$url = str_replace($v, $k, $url);
+			}
+		}
 		return BASE_URL.'/'.$url;
 	}
 }

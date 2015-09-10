@@ -34,6 +34,26 @@ class PostsController extends Controller {
 	* ADMIN
 	**/
 	function admin_index(){
+		$perPage = 10;
+		$this->loadModel('Post');
+		$condition = array('type' =>'post');
 
+		$d['posts'] = $this->Post->find(array(
+			'fields' => 'id,name,online',
+			'conditions' => $condition,
+			'limit' => ($perPage*($this->request->page-1).','.$perPage
+			)));
+		$d['total'] = $this->Post->findCount($condition);
+		$d['page'] = ceil($d['total'] / $perPage);
+		$this->set($d);
+	}
+
+	/**
+	* delete post
+	**/
+	function admin_delete($id){
+		$this->loadModel('Post');
+		$this->Post->delete($id);
+		$this->redirect('admin/posts/index');
 	}
 }

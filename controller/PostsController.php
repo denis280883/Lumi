@@ -27,4 +27,11 @@ class PostsController extends Controller {
 		}
 		$this->set($d);
 	}
+
+	/**
+	*
+	**/
+	function admin_index(){
+		
+	}
 }

@@ -3,6 +3,13 @@ class Router{
 
 
 	static $routes = array();
+	static $prefixes = array();
+
+	static function prefix($url,$prefix){
+		self::$prefixes[$url] = $prefix;
+				debug(self::$prefixes);
+
+	}
 
 	/**
 	*  Could to Parse an url
@@ -10,10 +17,13 @@ class Router{
 	* @return array contains params
 	**/
 	static function parse($url,$request){
-		$usr = trim($url, '/');
+		$url = trim($url, '/');
+
 		if(empty($url)){
-			$url = Router::$routes[0]['url'];
+
+			//$url = Router::$routes[0]['url'];
 		}else{
+
 			foreach (Router::$routes as $v) {
 				if(preg_match($v['catcher'], $url,$match)){
 					$request->controller = $v['controller'];
@@ -28,13 +38,24 @@ class Router{
 					return $request;
 				}
 			}
+
 		}
 
 
 		$params = explode('/',$url);
-		$request->controller = $params[1];
-		$request->action = isset($params[2]) ? $params[2] : 'index';
-		$request->params = array_slice($params,3);
+		debug(self::$prefixes);
+		if(in_array($params[0],array_keys(self::$prefixes))){
+
+			$request->prefix = self::$prefixes[$params[0]];
+			//array_shift($params);
+			//array_shift($params);
+
+		}
+		print_r('Vide');
+					debug($params);
+		$request->controller = $params[0];
+		$request->action = isset($params[1]) ? $params[1] : 'index';
+		$request->params = array_slice($params,2);
 		return true;
 	}
 

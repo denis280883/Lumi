@@ -7,7 +7,7 @@ class Form{
 		$this->controller = $controller;
 	}
 
-	public function input($name,$label,$options){
+	public function input($name,$label,$options = array()){
 		$html ='<div class="clearfix">
 					<label for="input'.$name.'">'.$label.'</label>
 					<div class="input">';

@@ -53,10 +53,9 @@ class PostsController extends Controller {
 	**/
 	function admin_edit($id){
 		$this->loadModel('Post');
-		$d['post'] = $this->Post->findFirst(array(
+		$this->request->data = $this->Post->findFirst(array(
 			'conditions' => array('id'=>$id)
 		));
-		$this->set($d);
 	}
 
 	/**

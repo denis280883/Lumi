@@ -11,7 +11,7 @@ class Form{
 		return '<div class="clearfix">
 				<label for="input'.$name.'">'.$label.'</label>
 				<div class="input">
-					<input type="text" id="input'.$name.'" name="'.$name.'" value="">
+					<input type="text" id="input'.$name.'" name="'.$name.'" value="'.$this->controller->request->data->$name.'">
 				</div>
 			</div>';
 

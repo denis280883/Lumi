@@ -49,12 +49,23 @@ class PostsController extends Controller {
 	}
 
 	/**
+	* edit post
+	**/
+	function admin_edit($id){
+		$this->loadModel('Post');
+		$d['post'] = $this->Post->findFirst(array(
+			'conditions' => array('id'=>$id)
+		));
+		$this->set($d);
+	}
+
+	/**
 	* delete post
 	**/
 	function admin_delete($id){
 		$this->loadModel('Post');
-		//$this->Post->delete($id);
-		$this->Session->SetFlash('Le contenu a bien été supprimé!','');
+		$this->Post->delete($id);
+		$this->Session->SetFlash('Le contenu a bien été supprimé!');
 		$this->redirect('admin/posts/index');
 	}
 }

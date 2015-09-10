@@ -41,11 +41,8 @@ class Router{
 
 		$params = explode('/',$url);
 		if(in_array($params[0],array_keys(self::$prefixes))){
-
 			$request->prefix = self::$prefixes[$params[0]];
-			//array_shift($params);
-			//array_shift($params);
-
+			array_shift($params);
 		}
 
 		$request->controller = $params[0];

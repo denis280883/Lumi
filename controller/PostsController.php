@@ -31,7 +31,7 @@ class PostsController extends Controller {
 	}
 
 	/**
-	*
+	* ADMIN
 	**/
 	function admin_index(){
 

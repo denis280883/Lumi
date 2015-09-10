@@ -6,7 +6,7 @@
 	<div class="clearfix">
 		<label for="inputTitre">Titre</label>
 		<div class="input">
-			<input type="text" name="name" value="<?php echo $post->name; ?>">
+			<input type="text" id="inputTitre" name="name" value="<?php echo $post->name; ?>">
 		</div>
 	</div>
 </form>

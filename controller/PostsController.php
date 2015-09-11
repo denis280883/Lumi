@@ -61,7 +61,7 @@ class PostsController extends Controller {
 				$this->request->data->created = date('Y-m-d h:i:s');
 				$this->Post->save($this->request->data);
 				$this->Session->SetFlash('Le contenu a bien été modifié!');
-				$id = $this->Post->id;
+				$this->redirect('admin/posts/index');
 			}else{
 				$this->Session->SetFlash('Merci de corriger vos informations', 'error');
 			}

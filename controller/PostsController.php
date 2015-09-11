@@ -56,8 +56,14 @@ class PostsController extends Controller {
 		$this->loadModel('Post');
 		$d['id'] = '';
 		if($this->request->data){
-			$this->Post->save($this->request->data);
-			$id = $this->Post->id;
+			if ($this->Post->validates($this->request->data)){
+				//$this->Post->save($this->request->data);
+				$this->Session->SetFlash('Le contenu a bien été modifié!');
+				$id = $this->Post->id;
+			}else{
+
+			}
+
 		}
 		if($id){
 			$this->request->data = $this->Post->findFirst(array(

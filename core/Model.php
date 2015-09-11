@@ -155,6 +155,26 @@ class Model{
 			$this->id = $this->db->lastInsertId();
 		}
 		return true;
-		
+	}
+
+	/**
+	* Permet de valider des données
+	* @param $data données à valider 
+	**/
+	function validates($data){
+		$errors = array();
+		foreach ($this->validate as $k=>$v) {
+			if(!isset($data->$k)){
+				$errors[$k] = $v['message'];
+			}else{
+				if($v['rule'] == 'notEmpty' && empty($data->$k)){
+					$errors[$k] = $v['message'];
+				}elseif(!preg_match('/^'.$v['rule'].'$/',$data->$k))	{
+					$errors[$k] = $v['message'];
+				}
+			}
+		}
+		debug($errors);
+		die();
 	}
 }

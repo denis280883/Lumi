@@ -21,7 +21,6 @@ class Request{
 			foreach($_POST as $k=>$v){
 				$this->data->$k=$v;
 			}
-			debug($this->data);
 		}
  	}
 }

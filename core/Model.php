@@ -7,6 +7,7 @@ class Model{
 	public $table = false;
 	public $db;
 	public $primaryKey = 'id';
+	public $id;
 
 	public function __construct(){
 		// Initialize variabls
@@ -114,6 +115,7 @@ class Model{
 		
 		if(isset($data->$key) && !empty($data->$key)){
 			$sql = 'UPDATE '.$this->table.' SET '.implode(',',$fields).' WHERE '.$key.'=:'.$key;
+			$this->id= $data->$key;
 		}
 		$pre = $this->db->prepare($sql);
 		$pre->execute($d);

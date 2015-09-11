@@ -55,11 +55,16 @@ class PostsController extends Controller {
 		$this->loadModel('Post');
 		if($this->request->data){
 			$this->Post->save($this->request->data);
+			$id = $this->Post->id;
 		}
-		$this->loadModel('Post');
-		$this->request->data = $this->Post->findFirst(array(
+		if($id){
+			$this->request->data = $this->Post->findFirst(array(
 			'conditions' => array('id'=>$id)
-		));
+			));
+		}
+
+
+		
 	}
 
 	/**

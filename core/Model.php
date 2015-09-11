@@ -9,7 +9,7 @@ class Model{
 	public $primaryKey = 'id';
 	public $id;
 	public $errors = array();
-
+	public $form;
 
 
 	/**
@@ -167,12 +167,18 @@ class Model{
 			if(!isset($data->$k)){
 				$errors[$k] = $v['message'];
 			}else{
-				if($v['rule'] == 'notEmpty' && empty($data->$k)){
-					$errors[$k] = $v['message'];
-				}elseif(!preg_match('/^'.$v['rule'].'$/',$data->$k))	{
+				if($v['rule'] == 'notEmpty'){
+					if(empty($data->$k)) {
+				  		$errors[$k] = $v['message'];
+				  	} 
+				}elseif(!preg_match('/^'.$v['rule'].'$/',$data->$k)){
 					$errors[$k] = $v['message'];
 				}
 			}
+		}
+		$this->errors = $errors;
+		if(isset($this->Form)){
+			$this->Form->errors = $errors;
 		}
 		if(empty($errors)){
 			return true;

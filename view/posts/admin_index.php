@@ -23,3 +23,5 @@
 		<?php endforeach ?>
 	</tbody>
 </table>
+
+<a href="<?php echo Router::connect('admin/posts/edit'); ?>" class="primary btn">Ajouter un article</a>

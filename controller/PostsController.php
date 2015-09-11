@@ -64,13 +64,16 @@ class PostsController extends Controller {
 				$this->Session->SetFlash('Merci de corriger vos informations', 'error');
 			}
 
+		}else{
+			if($id){
+				$this->request->data = $this->Post->findFirst(array(
+				'conditions' => array('id'=>$id)
+				));
+				$d['id'] = $id;
+			}
 		}
-		if($id){
-			$this->request->data = $this->Post->findFirst(array(
-			'conditions' => array('id'=>$id)
-			));
-			$d['id'] = $id;
-		}
+		
+
 
 		$this->set($d);
 	}

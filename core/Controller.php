@@ -63,6 +63,9 @@ class Controller{
 		require_once($file);
 		if(!isset($this->$name)){
 			$this->$name = new $name();
+			if(isset($this->Form)){
+				$this->$name->Form = $this->Form;
+			}
 		} else{
 			echo 'pas chargé';
 		}

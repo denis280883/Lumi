@@ -5,9 +5,13 @@ class Router{
 	static $routes = array();
 	static $prefixes = array();
 
+	/**
+	* Add  prefix of Routing
+	**/
 	static function prefix($url,$prefix){
 		self::$prefixes[$url] = $prefix;
 	}
+
 
 	/**
 	*  Could to Parse an url
@@ -15,13 +19,12 @@ class Router{
 	* @return array contains params
 	**/
 	static function parse($url,$request){
-		$url = trim($url, '/');
-
+		$url = trim($url,'/');
 		if(empty($url)){
 			$url = Router::$routes[0]['url'];
 		}else{
 
-			foreach (Router::$routes as $v) {
+			foreach(Router::$routes as $v) {
 				if(preg_match($v['catcher'], $url,$match)){
 					$request->controller = $v['controller'];
 					$request->action = isset($match['action']) ? $match['action'] : $v['action'];
@@ -32,6 +35,7 @@ class Router{
 					if(!empty($match['args'])) {
 						$request->params += explode('/',trim($match['args'],'/'));
 					}
+
 					return $request;
 				}
 			}

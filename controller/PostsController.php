@@ -46,13 +46,16 @@ class PostsController extends Controller {
 		$d['total'] = $this->Post->findCount($condition);
 		$d['page'] = ceil($d['total'] / $perPage);
 		$this->set($d);
+
 	}
 
 	/**
 	* edit post
 	**/
 	function admin_edit($id = null){
+		//$perPage = 10;
 		$this->loadModel('Post');
+		$d['id'] = '';
 		if($this->request->data){
 			$this->Post->save($this->request->data);
 			$id = $this->Post->id;
@@ -61,10 +64,10 @@ class PostsController extends Controller {
 			$this->request->data = $this->Post->findFirst(array(
 			'conditions' => array('id'=>$id)
 			));
+			$d['id'] = $id;
 		}
 
-
-		
+		$this->set($d);
 	}
 
 	/**

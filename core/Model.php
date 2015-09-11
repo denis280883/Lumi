@@ -9,9 +9,15 @@ class Model{
 	public $primaryKey = 'id';
 	public $id;
 
+
+
+
+	/**
+	* Permet d'initialiser les variable du Model
+	**/
 	public function __construct(){
 		// Initialize variabls
-		if($this->table == false){
+		if($this->table === false){
 			$this->table = strtolower(get_class($this)).'s';
 		}
 		
@@ -21,7 +27,7 @@ class Model{
 			$this->db = Model::$connections[$this->conf];
 			return true;
 		}
-		try {
+		try{
 			$pdo = new PDO(
 				'mysql:host='.$conf['host'].';dbname='.$conf['database'].';',
 				$conf['login'],
@@ -33,37 +39,39 @@ class Model{
 			Model::$connections[$this->conf] = $pdo;
 			$this->db = $pdo;
 		}catch(PDOException $e){
-			if (conf::$debug >= 1){
+			if(conf::$debug >= 1){
 				die($e->getMessage());
-			}else {
+			}else{
 				die('Impossible de se connecter à la base de donnée');
 			}
-			
 		}
 
 	}
 
-	public function find($req){
+	/**
+	* Permet de récupérer plusieurs enregistrements
+	* @param $req Tableau contenant les éléments de la requête
+	**/
+	public function find($req = array()){
 		$sql = 'SELECT ';  
 
 		if(isset($req['fields'])){
 			if(is_array($req['fields'])){
 				$sql .= implode(', ',$$req['fields']);
 			}else{
-				$sql .=$req['fields'];
+				$sql .= $req['fields'];
 			}
 		}else{
 			$sql.='*';
 		}
 
 		$sql .= ' FROM '.$this->table.' as '.get_class($this).' ';
-		//$sql = 'SELECT * FROM '.$this->table.' as '.get_class($this).' ';
 
 		// Constructor of condition
 		if(isset($req['conditions'])){
-			$sql .='WHERE ';
+			$sql .= 'WHERE ';
 			if(!is_array($req['conditions'])){
-				$sql .=$req['conditions'];
+				$sql .= $req['conditions'];
 			}else{
 				$cond = array();
 				foreach($req['conditions'] as $k=>$v){
@@ -87,10 +95,16 @@ class Model{
 		return $pre->fetchAll(PDO::FETCH_OBJ);
 	}
 
+	/**
+	* Alias permettant de retrouver le premier enregistrement
+	**/
 	public function findFirst($req){
 		return current($this->find($req));
 	}
 
+	/**
+	* Récupère le nombre d'enregistrement
+	**/
 	public function findCount($condition){
 		$res = $this->findFirst(array(
 			'fields' => 'COUNT('.$this->primaryKey.') as count',
@@ -99,11 +113,20 @@ class Model{
 		return $res->count;
 	}
 
+	/**
+	* Permet de supprimer un enregistrement
+	* @param $id ID de l'enregistrement à supprimer
+	**/	
 	public function delete($id){
 		$sql = "DELETE FROM $this->table WHERE $this->primaryKey = $id";
 		$this->db->query($sql);
 	}
 
+
+	/**
+	* Permet de sauvegarder des données
+	* @param $data Données à enregistrer
+	**/
 	public function save($data){
 		$key = $this->primaryKey;
 		$fields = array();

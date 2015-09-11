@@ -53,7 +53,6 @@ class PostsController extends Controller {
 	**/
 	function admin_edit($id = null){
 		$this->loadModel('Post');
-		
 		if($this->request->data){
 			$this->Post->save($this->request->data);
 		}

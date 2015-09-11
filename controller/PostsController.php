@@ -57,7 +57,7 @@ class PostsController extends Controller {
 		$d['id'] = '';
 		if($this->request->data){
 			if ($this->Post->validates($this->request->data)){
-				//$this->Post->save($this->request->data);
+				$this->Post->save($this->request->data);
 				$this->Session->SetFlash('Le contenu a bien été modifié!');
 				$id = $this->Post->id;
 			}else{
@@ -72,7 +72,7 @@ class PostsController extends Controller {
 				$d['id'] = $id;
 			}
 		}
-		
+
 
 
 		$this->set($d);

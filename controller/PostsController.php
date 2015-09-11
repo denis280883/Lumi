@@ -61,7 +61,7 @@ class PostsController extends Controller {
 				$this->Session->SetFlash('Le contenu a bien été modifié!');
 				$id = $this->Post->id;
 			}else{
-
+				$this->Session->SetFlash('Merci de corriger vos informations', 'error');
 			}
 
 		}

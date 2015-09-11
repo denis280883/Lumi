@@ -8,7 +8,7 @@ class Model{
 	public $db;
 	public $primaryKey = 'id';
 	public $id;
-
+	public $errors = array();
 
 
 
@@ -174,7 +174,9 @@ class Model{
 				}
 			}
 		}
-		debug($errors);
-		die();
+		if(empty($errors)){
+			return true;
+		}
+		return false;
 	}
 }

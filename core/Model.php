@@ -130,14 +130,13 @@ class Model{
 	public function save($data){
 		$key = $this->primaryKey;
 		$fields = array();
-		$d = array();
-		if(isset($data->$key)) {
-			unset($data->$key);
-		}
-
 		foreach($data as $k=>$v){
-			$fields[] = "$k=:$k";
-			$d[":$k"] = $v;
+			if($k!=$this->primaryKey){
+				$fields[] = "$k=:$k";
+				$d[":$k"] = $v;
+			}elseif(!empty($v)){
+				$d[":$k"] = $v;
+			}
 		}
 		
 		if(isset($data->$key) && !empty($data->$key)){

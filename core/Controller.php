@@ -16,8 +16,9 @@ class Controller{
 	function __construct($request = null){
 		if($request){
 			$this->request = $request;	
+			require ROOT.DS.'config'.DS.'hook.php';
 		}
-		require ROOT.DS.'config'.DS.'hook.php';
+		
 	}
 
 

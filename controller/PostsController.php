@@ -53,7 +53,6 @@ class PostsController extends Controller {
 	* edit post
 	**/
 	function admin_edit($id = null){
-		//$perPage = 10;
 		$this->loadModel('Post');
 		$d['id'] = '';
 		if($this->request->data){

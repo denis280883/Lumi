@@ -8,6 +8,9 @@ class Form{
 	}
 
 	public function input($name,$label,$options = array()){
+		if($label == 'hidden'){
+			return '<input type="hidden" name ="'.$name.'" value="'.$this->controller->request->data->$name.'">';
+		}
 		$html ='<div class="clearfix">
 					<label for="input'.$name.'">'.$label.'</label>
 					<div class="input">';

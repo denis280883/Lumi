@@ -31,7 +31,7 @@ class Form{
 		}elseif($options['type'] == 'textarea') {
 			$html .= '<textarea id="input'.$name.'" name="'.$name.'"'.$attr.'>'.$value.'</textarea>';
 		}elseif($options['type'] == 'checkbox') {
-			$html .= '<input type="hidden" name="'.$name.'" value="0"><input type="checkbox" name="'.$name.'" value ="1" >' ;
+			$html .= '<input type="hidden" name="'.$name.'" value="0"><input type="checkbox" name="'.$name.'" value ="1" '.(empty($value)?'':'checked').'>' ;
 		}
 		$html .= '</div></div>';
 		return $html;

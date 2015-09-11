@@ -4,6 +4,7 @@ class Request{
 	public $url;	// URL call by user
 	public $page = 1;
 	public $prefix = false;
+	public $data = false;
 
 	function __construct(){
 		$this->url = isset($_SERVER['PATH_INFO'])?$_SERVER['PATH_INFO']:'/';
@@ -14,6 +15,13 @@ class Request{
 					$this->page = round($_GET['page']);
 				}
 			}
+		}
+		if(!empty($_POST)){
+			$this->data = new stdClass();
+			foreach($_POST as $k=>$v){
+				$this->data->$k=$v;
+			}
+			debug($this->data);
 		}
  	}
 }

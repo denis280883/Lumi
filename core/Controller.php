@@ -17,6 +17,7 @@ class Controller{
 		if($request){
 			$this->request = $request;	
 		}
+		require ROOT.DS.'config'.DS.'hook.php';
 	}
 
 

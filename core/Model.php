@@ -17,7 +17,7 @@ class Model{
 	**/
 	public function __construct(){
 		// Initialize variabls
-		if($this->table === false){
+		if($this->table == false){
 			$this->table = strtolower(get_class($this)).'s';
 		}
 		
@@ -52,7 +52,7 @@ class Model{
 	* Permet de récupérer plusieurs enregistrements
 	* @param $req Tableau contenant les éléments de la requête
 	**/
-	public function find($req = array()){
+	public function find($req){
 		$sql = 'SELECT ';  
 
 		if(isset($req['fields'])){

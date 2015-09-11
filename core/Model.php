@@ -106,15 +106,18 @@ class Model{
 	public function save($data){
 		$key = $this->primaryKey;
 		$fields = array();
+		$d = array();
 		foreach($data as $k=>$v){
 			$fields[] = "$k=:$k";
+			$d[":$k"] = $v;
 		}
-
+		
 		if(isset($data->$key) && !empty($data->$key)){
 			$sql = 'UPDATE '.$this->table.' SET '.implode(',',$fields).' WHERE '.$key.'=:'.$key;
 		}
-		debug($sql);
-		die();
+		$pre = $this->db->prepare($sql);
+		$pre->execute($d);
+		return true;
 		
 	}
 }

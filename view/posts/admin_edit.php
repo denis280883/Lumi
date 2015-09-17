@@ -45,7 +45,7 @@
     function fileBrowser(field_name, url, type, win){
 
           tinyMCE.activeEditor.windowManager.open({
-            file : 'http://www.prodimex.ch/',
+            file : '<?php echo Router::url('admin/medias/index/'.$id); ?>',
             title : 'Gallerie',
             width: 420,
             height: 400,

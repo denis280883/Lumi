@@ -35,7 +35,8 @@
     <script type="text/javascript" src="<?php echo Router::webroot('js/tinymce/tinymce.min.js'); ?>"></script>
     <script type="text/javascript">
     tinymce.init({
-        selector: "textarea",
+        mode: "specific_textareas",
+        editor_selector: "wysiwyg",
         plugins: [
             "advlist autolink lists link image charmap print preview anchor",
             "searchreplace visualblocks code fullscreen",

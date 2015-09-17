@@ -6,10 +6,11 @@
 	<?php echo $this->Form->input('name', 'titre') ?>
 	<?php echo $this->Form->input('slug', 'url') ?>
 	<?php echo $this->Form->input('id', 'hidden'); ?>
-	<?php echo $this->Form->input('content', 'Contenu',array('type'=>'textarea', 'class'=>'xxlarge','rows'=>5)); ?>
+	<?php echo $this->Form->input('content', 'Contenu',array('type'=>'textarea', 'class'=>'xxlarge wysiwyg','rows'=>5)); ?>
 	<?php echo $this->Form->input('online', 'En ligne',array('type'=>'checkbox')); ?>
 	<div class="action">
 		<input type="submit" class="btn primary" value="Envoyer">
 
 	</div>
+	<textarea name="" id="" cols="30" rows="10"></textarea>
 </form>

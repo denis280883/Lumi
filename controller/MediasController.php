@@ -4,6 +4,7 @@ class MediasController extends Controller {
 	function admin_index ($id) {
 		$this->layout = 'model';
 		$this->loadModel ('Media');
+		
 		if ($this->request->data && !empty ($_FILES['file']['name'])) {
 			if (strpos ($_FILES['file']['type'], 'image') !== false) {
 				$dir = WEBROOT . DS . 'img' . DS . date ('Y-m');
@@ -22,10 +23,11 @@ class MediasController extends Controller {
 				$this->Form->errors['file'] = "Le fichier n'est pas une image";
 			}
 		}
-		$this->layout = 'modal';
+		
 		$d['images'] = $this->Media->find (array (
 			'conditions' => array ('post_id' => $id
 		))); 
+		$this->layout = 'modal';
 		$d['post_id'] = $id;
 		$this->set ($d); 
 	}

@@ -1,3 +1,33 @@
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+
+<table>
+	<thead>
+		<tr>
+			<th></th>
+			<th>Titre</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+		<?php foreach ($images as $k => $v): ?>
+			<tr>
+				<td>
+					<a href="#" onclick="FileBrowserDialogue.sendURL('<?php echo Router::webroot('img/'.$v->file); ?>')">
+						<img src="<?php echo Router::webroot('img/'.$v->file); ?>"  width="500" height="100">
+					</a>
+				</td>
+				<td><?php echo $v->name; ?></td>
+				<td>
+					<a onclick="return confirm('Voulez vous vraiment supprimer cette image'); " href="<?php echo Router::url('admin/medias/delete/'.$v->id); ?>">Supprimer</a>
+				</td>
+			</tr>
+		<?php endforeach ?>
+	</tbody>
+</table>
 
 <div class="page-header">
 	<h1>Ajouter une image</h1>

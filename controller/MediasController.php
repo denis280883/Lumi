@@ -2,6 +2,7 @@
 
 class MediasController extends Controller {
 	function admin_index ($id) {
+		$this->layout = 'model';
 		$this->loadModel ('Media');
 		if ($this->request->data && !empty ($_FILES['file']['name'])) {
 			if (strpos ($_FILES['file']['type'], 'image') !== false) {

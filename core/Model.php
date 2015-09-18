@@ -52,7 +52,7 @@ class Model{
 	* Permet de récupérer plusieurs enregistrements
 	* @param $req Tableau contenant les éléments de la requête
 	**/
-	public function find($req){
+	public function find($req = array()){
 		$sql = 'SELECT ';  
 
 		if(isset($req['fields'])){

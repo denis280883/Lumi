@@ -90,4 +90,14 @@ class PostsController extends Controller {
 		$this->Session->SetFlash('Le contenu a bien été supprimé!');
 		$this->redirect('admin/posts/index');
 	}
+
+	/**
+	* Cound to list contains
+	**/
+	function admin_tinymce(){
+		$this->loadModel('Post');
+		$this->layout = 'modal';
+		$d['posts'] = $this->Post->find();
+		$this->set($d);
+	}
 }

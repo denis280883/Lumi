@@ -42,9 +42,13 @@
     });
 
     function fileBrowser(field_name, url, type, win){
-
+          if(type=='file'){
+            var explorer = '<?php echo Router::url('admin/posts/tinymce'); ?>';
+          }else{
+            var explorer = '<?php echo Router::url('admin/medias/index/'.$id); ?>';
+          }
           tinyMCE.activeEditor.windowManager.open({
-            file : '<?php echo Router::url('admin/medias/index/'.$id); ?>',
+            file : explorer,
             title : 'Gallerie',
             width: 420,
             height: 400,

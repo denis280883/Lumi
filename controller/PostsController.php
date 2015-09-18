@@ -54,8 +54,21 @@ class PostsController extends Controller {
 	**/
 	function admin_edit($id = null){
 		$this->loadModel('Post');
-		$d['id'] = '';
-
+		if($id === null){
+			$post = $this->Post->findFirst(array(
+				'conditions' => array('online' => -1),
+			));
+			if(!empty($post)){
+				$id = $post->id;
+			}else{
+				$this->Post->save(array(
+					'online' => -1,
+					'created' 	 => date('Y-m-d')
+				));
+				$id = $this->Post->id;
+			} 
+		}
+		$d['id'] = $id;
 		if($this->request->data){
 			if ($this->Post->validates($this->request->data)){
 				$this->request->data->type = 'post';
@@ -68,16 +81,10 @@ class PostsController extends Controller {
 			}
 
 		}else{
-			if($id){
-				$this->request->data = $this->Post->findFirst(array(
+			$this->request->data = $this->Post->findFirst(array(
 				'conditions' => array('id'=>$id)
-				));
-				$d['id'] = $id;
-			}
+			));
 		}
-
-
-
 		$this->set($d);
 	}
 

@@ -35,7 +35,8 @@ class Form{
 		}elseif($options['type'] == 'textarea'){
 			$html .= '<textarea id="input'.$name.'" name="'.$name.'"'.$attr.'>'.$value.'</textarea>';
 		}elseif($options['type'] == 'checkbox'){
-			$html .= '<input type="hidden" name="'.$name.'" value="0"><input type="checkbox" name="'.$name.'" value=""'.$attr.'>';
+			$html .= '<input type="hidden" name="'.$name.'" value="0"><input type="checkbox" name="'.$name.'" value="1" '.(empty($value)?'':'checked').'>';
+
 		}
 		elseif($options['type'] == 'file'){
 			$html .= '<input type="hidden" name="'.$name.'" value="0"><input type="file" class="input-file" name="'.$name.'" value="1" '.(empty($value)?'':'checked').'>';

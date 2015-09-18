@@ -10,7 +10,6 @@
 	<?php echo $this->Form->input('online', 'En ligne',array('type'=>'checkbox')); ?>
 	<div class="action">
 		<input type="submit" class="btn primary" value="Envoyer">
-
 	</div>
 </form>
 

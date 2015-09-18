@@ -55,6 +55,7 @@ class PostsController extends Controller {
 	function admin_edit($id = null){
 		$this->loadModel('Post');
 		$d['id'] = '';
+
 		if($this->request->data){
 			if ($this->Post->validates($this->request->data)){
 				$this->request->data->type = 'post';

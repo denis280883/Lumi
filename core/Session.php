@@ -29,7 +29,12 @@ class Session{
 
 	public function read($key = null){
 		if($key){
-			return $_SESSION[$key];
+			if(isset($_SESSION[$key])){
+				return $_SESSION[$key];
+			}else{
+				return false;
+			}
+				
 		}else{
 			return $_SESSION;
 		}

@@ -39,9 +39,11 @@ class Form{
 
 		}
 		elseif($options['type'] == 'file'){
-			$html .= '<input type="hidden" name="'.$name.'" value="0"><input type="file" class="input-file" name="'.$name.'" value="1" '.(empty($value)?'':'checked').'>';
+			$html .= '<input type="hidden" name="'.$name.'" value="0"><input type="file" class="input-file" name="'.$name.'"'.$attr.'>';
 		}
-
+		elseif($options['type'] == 'password'){
+			$html .= '<input type="password" id="input'.$name.'" name="'.$name.'" value="'.$value.'"'.$attr.'>';
+		}
 		
 			
 		

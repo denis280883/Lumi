@@ -43,9 +43,6 @@ class Dispatcher{
  		$file = ROOT.DS.'controller'.DS.$name.'.php';
  		require $file; 
  		$controller = new $name($this->request);
-
- 		$controller->Session = new Session();
- 		$controller->Form = new Form($controller);
  		return $controller;
  	}
 }

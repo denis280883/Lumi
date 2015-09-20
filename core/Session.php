@@ -27,6 +27,14 @@ class Session{
 		$_SESSION[$key] = $value;
 	}
 
+	public function read($key = null){
+		if($key){
+			return $_SESSION[$key];
+		}else{
+			return $_SESSION;
+		}
+	}
+
 }
 
  ?>

@@ -24,7 +24,7 @@ class Session{
 	}
 
 	public function write($key,$value){
-		
+		$_SESSION[$key] = $value;
 	}
 
 }

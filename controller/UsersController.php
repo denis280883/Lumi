@@ -12,7 +12,7 @@ class UsersController extends Controller{
 			$user = $this->User->findFirst(array('conditions' => array('login'=>$data->login, 'password' => $data->password
 				)));
 			if(!empty($user)){
-
+				$_SESSION['User'] = $user;
 			}
 			$this->request->data->password = '';
 		}

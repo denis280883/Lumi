@@ -23,6 +23,10 @@ class Session{
 		}
 	}
 
+	public function write($key,$value){
+		
+	}
+
 }
 
  ?>

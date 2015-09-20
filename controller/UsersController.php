@@ -16,8 +16,8 @@ class UsersController extends Controller{
 			}
 			$this->request->data->password = '';
 		}
-		if($this->Session->read('User')){
-			
+		if($this->Session->isLogged()){
+
 		}
 	}
 

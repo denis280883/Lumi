@@ -16,6 +16,7 @@
                             <li><a href="<?php echo Router::url('admin/posts/index'); ?>">Articles</a></li>
                             <li><a href="<?php echo Router::url('admin/pages/index'); ?>">Pages</a></li>
                             <li><a href="<?php echo Router::url('/'); ?>">Voir le site</a></li>
+                            <li><a href="<?php echo Router::url('users/logout'); ?>">Se déconnecter</a></li>
                     </ul>
                 </div>
             </div>

@@ -5,7 +5,6 @@ class UsersController extends Controller{
 	*
 	**/
 	function login(){
-		debug($this->Session->read('chien'));
 		if($this->request->data){
 			$data=$this->request->data;
 			$data->password = sha1($data->password);
@@ -16,6 +15,9 @@ class UsersController extends Controller{
 				$this->Session->write('User',$user);
 			}
 			$this->request->data->password = '';
+		}
+		if($this->Session->read('User')){
+			
 		}
 	}
 

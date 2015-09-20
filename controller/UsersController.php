@@ -12,9 +12,9 @@ class UsersController extends Controller{
 			$user = $this->User->findFirst(array('conditions' => array('login'=>$data->login, 'password' => $data->password
 				)));
 			if(!empty($user)){
-				debug($user);
+
 			}
-			debug($data);
+			$this->request->data->password = '';
 		}
 	}
 

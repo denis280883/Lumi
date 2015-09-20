@@ -31,7 +31,6 @@ class Dispatcher{
 	**/
  	function error($message){
 		$controller = new Controller($this->request);
-		$controller->Session = new Session();
 		$controller->e404($message);
 	}
 

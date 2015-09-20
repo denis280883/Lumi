@@ -23,7 +23,7 @@ class Router{
 		if(empty($url)){
 			$url = Router::$routes[0]['url'];
 		}else{
-
+			$match = false;
 			foreach(Router::$routes as $v) {
 				if(preg_match($v['catcher'], $url,$match)){
 					$request->controller = $v['controller'];

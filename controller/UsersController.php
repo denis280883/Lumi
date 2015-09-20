@@ -17,7 +17,7 @@ class UsersController extends Controller{
 			$this->request->data->password = '';
 		}
 		if($this->Session->isLogged()){
-
+			$this->redirect('cockpit');
 		}
 	}
 

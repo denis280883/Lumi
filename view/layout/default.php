@@ -37,7 +37,7 @@
                   <span class="icon-bar"></span>
                 </a>
 
-                <a class="brand" href="#">Lumitel SA</a>
+                <a class="brand" href="<?php echo BASE_URL.'/'; ?>">Lumitel SA</a>
                 <div class="nav-collapse collapse">
 
                     <ul class="nav">

@@ -3,9 +3,17 @@
     <head> 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
     <title><?php echo isset($title_for_layout)?$title_for_layout:'Mon site'; ?></title>
-    <link rel="stylesheet" href="http://bootstrapdocs.com/v2.3.2/docs/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="http://localhost/Lumi/webroot/css/bootstrap.css"> 
+
      </head> 
-    <body> 
+<body> 
+
+
+<!--start: Header -->
+<header>
+
+    <!--start: Container -->
+    <div class="container">
 
         <div class="navbar navbar-inverse navbar">
             <div class="navbar-inner">
@@ -31,6 +39,10 @@
             <?php echo $this->Session->flash(); ?>
         	<?php echo $content_for_layout; ?>
         </div>
+
+    </div>
+</header>
+<!--end: Header-->
 
     </body> 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>

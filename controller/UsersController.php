@@ -17,7 +17,12 @@ class UsersController extends Controller{
 			$this->request->data->password = '';
 		}
 		if($this->Session->isLogged()){
-			$this->redirect('cockpit');
+			if($this->Session->user('role') == 'admin'){
+				$this->redirect('cockpit');
+			}else{
+				$this->redirect('');
+			}
+			
 		}
 	}
 

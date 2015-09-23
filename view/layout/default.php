@@ -1,21 +1,34 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr"> 
-<head> 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" class="csstransforms csstransforms3d csstransitions js cssanimations csstransitions"> 
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+
+    <meta charset="utf-8">
     <title><?php echo isset($title_for_layout)?$title_for_layout:'Lumitel SA - Entreprise Générale d’Electricité et Télécommunications'; ?></title>
     <meta name="description" content="Lumitel SA">
     <meta name="keywords" content="Lumitel SA">
     <meta name="author" content="Lumitel SA">
+    <!-- end: Meta -->
 
     <!-- start: Favicon -->
     <link rel="shortcut icon" href="http://localhost/Lumi/webroot/favicon.ico">
 
     <!-- start: CSS -->
+
+    <link rel="stylesheet" href="http://localhost/Lumi/webroot/css/css"> 
+    <link rel="stylesheet" href="http://localhost/Lumi/webroot/css/css(1)"> 
+    <link rel="stylesheet" href="http://localhost/Lumi/webroot/css/css(2)"> 
+    <link rel="stylesheet" href="http://localhost/Lumi/webroot/css/css(3)"> 
+    <link rel="stylesheet" href="http://localhost/Lumi/webroot/css/css(4)"> 
+    <link rel="stylesheet" href="http://localhost/Lumi/webroot/css/css(5)"> 
     <link rel="stylesheet" href="http://localhost/Lumi/webroot/css/bootstrap.css"> 
+    <link rel="stylesheet" href="http://localhost/Lumi/webroot/css/bootstrap-responsive.css"> 
+
+     <link href="http://localhost/Lumi/webroot/css" rel="stylesheet" type="text/css">
     <!-- end: CSS -->
 
     <!-- start: Script -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://localhost/Lumi/webroot/js/jquery-1.9.1.min.js"></script>
+    <script src="http://localhost/Lumi/webroot/js/custom.js"></script>
     <!-- end: Script -->
 
 </head> 
@@ -38,9 +51,10 @@
                 </a>
 
                 <a class="brand" href="<?php echo BASE_URL.'/'; ?>">Lumitel SA</a>
-                <div class="nav-collapse collapse">
 
-                    <ul class="nav">
+                <div class="collapse navbar-collapse" id="main-navigation">
+
+                    <ul class="nav navbar-right navbar-nav">
                       <?php $pagesMenu = $this->request('Pages', 'getMenu'); ?>
                       <?php foreach($pagesMenu as $p):?>
                             <li><a href="<?php echo BASE_URL.'/pages/view/'.$p->id; ?>" title="<?php echo $p->name; ?>"><?php echo $p->name; ?></a></li>
@@ -153,5 +167,10 @@
 </div>
 <!-- end: Copyright -->
 
+<script src="http://localhost/Lumi/webroot/js/bootstrap.min.js"></script>
+<script src="http://localhost/Lumi/webroot/js/flexslider.js"></script> 
+<script src="http://localhost/Lumi/webroot/js/carousel.js"></script>
+<script src="http://localhost/Lumi/webroot/js/slider.js"></script>
 
- </body></html>
+
+</body></html>

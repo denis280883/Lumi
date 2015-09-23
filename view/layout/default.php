@@ -41,9 +41,19 @@
 
     <!--start: Navbar -->
     <nav class="navbar navbar-default" role="navigation">       
-
         <!--start: Container -->
         <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navigation">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><i class="fa fa-code"></i> Sma<span>rt</span>.</a>
+            </div>
+
 
             <!--start: Navbar -->
             <div class="navbar navbar-inverse navbar">
@@ -77,6 +87,70 @@
         <!--end: Container-->
     </nav>
     <!--end: Navbar -->     
+
+
+    <!-- start: Footer Menu -->
+    <div id="footer-menu" class="hidden-sm hidden-xs">
+
+        <!-- start: Container -->
+        <div class="container">
+            
+            <!-- start: Row -->
+            <div class="row">
+
+                <!-- start: Footer Menu Logo -->
+                <div class="col-sm-2">
+                    <div id="footer-menu-logo">
+                        <a class="brand" href="index3.html#">Lumi<span>tel</span>.</a>
+                    </div>
+                </div>
+                <!-- end: Footer Menu Logo -->
+
+                <!-- start: Footer Menu Links-->
+                <div class="col-sm-9">
+                    
+                    <div id="footer-menu-links">
+
+                        <ul id="footer-nav">
+
+                            <li><a href="index.php">Acceuil</a></li>
+
+                            <li><a href="about.html">Prestations</a></li>
+
+                            <li><a href="services.html">Réalisation</a></li>
+
+                            <li><a href="pricing.html">Entreprise</a></li>
+                        
+                            <li><a href="contact.php">Contact</a></li>
+
+                            <li><a href="blog.php">Actualités</a></li>
+
+                        </ul>
+
+                    </div>
+                    
+                </div>
+                <!-- end: Footer Menu Links-->
+
+                <!-- start: Footer Menu Back To Top -->
+                <div class="col-sm-1">
+                        
+                    <div id="footer-menu-back-to-top">
+                        <a href="index.php#"></a>
+                    </div>
+                
+                </div>
+                <!-- end: Footer Menu Back To Top -->
+            
+            </div>
+            <!-- end: Row -->
+            
+        </div>
+        <!-- end: Container  -->    
+
+    </div>  
+    <!-- end: Footer Menu -->
+
 
 
 <!-- start: Footer -->

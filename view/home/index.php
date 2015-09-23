@@ -78,7 +78,7 @@
 
         <div class="jumbotron">
             <h3>
-                Entreprise Générale d'Electricité et Télécommunications
+                Le choix d'une entreprise experte en électricité, télécommunication et sécurité
             </h3>
         </div><!--/.jumbotron-->
 
@@ -87,20 +87,20 @@
         <div class="row">
 
             <!-- start: Icon Box Start -->
-            <div class="offset1 col-sm-6 col-md-4">
+            <div class="col-sm-6 col-md-4">
                 
                 <div class="icons-box vertical">
                     
                     <div class="row">
                         
                         <div class="col-xs-4">
-                            <i class="fa fa-bolt circle full-color big"></i>
+                            <i class="fa fa-wrench circle full-color big"></i>
 
                         </div>
 
                         <div class="col-xs-8">
                             <h3>Dépannage 24h/24</h3>
-                            <p>Une panne à toute heure panne. N'hésitez pas à nous appeler pour toute incident électrique.</p>
+                            <p>Pour une panne à toute heure, n'hésitez pas à nous contacter, nous sommes à votre service pour tout incidence.</p>
                         </div>
                         
                     </div>      
@@ -111,19 +111,42 @@
             <!-- end: Icon Box-->
 
             <!-- start: Icon Box Start -->
-            <div class="offset1 col-sm-6 col-md-4">
+            <div class="col-sm-6 col-md-4">
                 
                 <div class="icons-box vertical">
                     
                     <div class="row">
                         
                         <div class="col-xs-4">
-                            <i class="fa fa-trophy circle full-color big"></i>
+                            <i class="fa fa-bolt circle full-color big"></i>
                         </div>
 
                         <div class="col-xs-8">
-                            <h3>Courant fort</h3>
-                            <p>Notre entreprise est agréé courant fort. Notre forte expérience vous permet de nous confier en toute tranquilité vos installations électriques</p>
+                            <h3>Spécialiste courant fort</h3>
+                            <p>Installations prises électriques, luminaires, interrupteurs, le tout effectué en toute sécurité</p>
+                        </div>
+                        
+                    </div>      
+
+                </div>
+                
+            </div>
+            <!-- end: Icon Box-->
+
+                        <!-- start: Icon Box Start -->
+            <div class="col-sm-6 col-md-4">
+                
+                <div class="icons-box vertical">
+                    
+                    <div class="row">
+                        
+                        <div class="col-xs-4">
+                            <i class="fa fa-check circle full-color big"></i>
+                        </div>
+
+                        <div class="col-xs-8">
+                            <h3>Votre partenaire de confiance</h3>
+                            <p>Doté d'une solide expérience de plus de dix ans au sein du réseau Genevois, l'entreprise ne cesse de croître son rayon d'activité dans les technologies existantes.</p>
                         </div>
                         
                     </div>      
@@ -136,7 +159,29 @@
         </div>
         <!-- end: Row -->   
 
+        <hr></hr>
+    
+        <!-- start Clients List --> 
+        <div class="clients-carousel">
+    
+            <ul class="slides clients">
 
+                <li><img src="./webroot/img/partner/001_eco21.jpg" alt=""/></li>
+                <li><img src="./webroot/img/partner/002_osram_sylvania.jpg" alt=""/></li> 
+                <li><img src="./webroot/img/partner/003_electro_materiel.png" alt=""/></li> 
+                <li><img src="./webroot/img/partner/004_swisscom-logo.jpg" alt=""/></li> 
+                <li><img src="./webroot/img/partner/005_logo-post.png" alt=""/></li> 
+                <li><img src="./webroot/img/partner/006_ottofischer.png" alt=""/></li>
+                <li><img src="./webroot/img/partner/007_Electroplast.png" alt=""/></li>
+                <li><img src="./webroot/img/partner/008_Zumtobel.jpg" alt=""/></li>
+                <li><img src="./webroot/img/partner/009_regent.jpg" alt=""/></li>
+                <li><img src="./webroot/img/partner/010_emcom.png" alt=""/></li>
+            </ul>
+    
+        </div>
+        <!-- end Clients List -->
+    
+        <hr>
 
 
 </div>

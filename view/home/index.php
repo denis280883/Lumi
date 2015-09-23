@@ -86,50 +86,78 @@
         <!-- start: Row -->
         <div class="row">
 
-            <!-- start: Icon Boxes -->
-            <div class="icons-box-vert-container">
+            <!-- start: Icon Box Start -->
+            <div class="col-sm-6 col-md-4">
+                
+                <div class="icons-box vertical">
+                    
+                    <div class="row">
+                        
+                        <div class="col-xs-4">
+                            <i class="fa fa-bolt circle full-color big"></i>
 
-                <!-- start: Icon Box Start -->
-                <div class="offset1 span4">
-                    <div class="icons-box-vert">
-                        <i class="ico-ok ico-white circle-color-full"></i>
-
-                        <div class="icons-box-vert-info">
-                            <h3>Flexibilité</h3>
-
-                            <p>
-                                Nous répondons à toutes vos attentes, tout en vous conseillant, afin de trouver la
-                                meilleure solution
-                            </p>
                         </div>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-                <!-- end: Icon Box-->
 
-                <!-- start: Icon Box Start -->
-                <div class="offset2 span4">
-                    <div class="icons-box-vert">
-                        <i class="ico-ok ico-white circle-color-full"></i>
-
-                        <div class="icons-box-vert-info">
-                            <h3>Fiabilité</h3>
-
-                            <p>
-                                Nous travaillons avec une gamme de produit de haute qualité provenant de partenaires
-                                reconnus
-                            </p>
+                        <div class="col-xs-8">
+                            <h3>Easy to use</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
                         </div>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-                <!-- end: Icon Box -->
+                        
+                    </div>      
 
+                </div>
+                
             </div>
-            <!-- end: Icon Boxes -->
-            <div class="clear"></div>
+            <!-- end: Icon Box-->
+
+            <!-- start: Icon Box Start -->
+            <div class="col-sm-6 col-md-4">
+                
+                <div class="icons-box vertical">
+                    
+                    <div class="row">
+                        
+                        <div class="col-xs-4">
+                            <i class="fa fa-trophy circle full-color big"></i>
+                        </div>
+
+                        <div class="col-xs-8">
+                            <h3>Best choice</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        </div>
+                        
+                    </div>      
+
+                </div>
+                
+            </div>
+            <!-- end: Icon Box-->
+
+            <!-- start: Icon Box Start -->
+            <div class="col-sm-6 col-md-4">
+                
+                <div class="icons-box vertical">
+                    
+                    <div class="row">
+                        
+                        <div class="col-xs-4">
+                            <i class="fa fa-tablet circle full-color big"></i>
+                        </div>
+
+                        <div class="col-xs-8">
+                            <h3>Fully responsive</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                        </div>
+                        
+                    </div>      
+
+                </div>
+                
+            </div>
+            <!-- end: Icon Box-->
+        
         </div>
-        <!-- end: Row -->
+        <!-- end: Row -->   
 
 
 

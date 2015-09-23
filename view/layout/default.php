@@ -13,13 +13,6 @@
     <link rel="shortcut icon" href="http://localhost/Lumi/webroot/favicon.ico">
 
     <!-- start: CSS -->
-
-    <link rel="stylesheet" href="http://localhost/Lumi/webroot/css/css"> 
-    <link rel="stylesheet" href="http://localhost/Lumi/webroot/css/css(1)"> 
-    <link rel="stylesheet" href="http://localhost/Lumi/webroot/css/css(2)"> 
-    <link rel="stylesheet" href="http://localhost/Lumi/webroot/css/css(3)"> 
-    <link rel="stylesheet" href="http://localhost/Lumi/webroot/css/css(4)"> 
-    <link rel="stylesheet" href="http://localhost/Lumi/webroot/css/css(5)"> 
     <link rel="stylesheet" href="http://localhost/Lumi/webroot/css/bootstrap.css"> 
     <link rel="stylesheet" href="http://localhost/Lumi/webroot/css/bootstrap-responsive.css"> 
 
@@ -28,7 +21,6 @@
 
     <!-- start: Script -->
     <script type="text/javascript" src="http://localhost/Lumi/webroot/js/jquery-1.9.1.min.js"></script>
-    <script src="http://localhost/Lumi/webroot/js/custom.js"></script>
     <!-- end: Script -->
 
 </head> 
@@ -51,10 +43,9 @@
                 </a>
 
                 <a class="brand" href="<?php echo BASE_URL.'/'; ?>">Lumitel SA</a>
+                <div class="nav-collapse collapse">
 
-                <div class="collapse navbar-collapse" id="main-navigation">
-
-                    <ul class="nav navbar-right navbar-nav">
+                    <ul class="nav">
                       <?php $pagesMenu = $this->request('Pages', 'getMenu'); ?>
                       <?php foreach($pagesMenu as $p):?>
                             <li><a href="<?php echo BASE_URL.'/pages/view/'.$p->id; ?>" title="<?php echo $p->name; ?>"><?php echo $p->name; ?></a></li>
@@ -171,6 +162,5 @@
 <script src="http://localhost/Lumi/webroot/js/flexslider.js"></script> 
 <script src="http://localhost/Lumi/webroot/js/carousel.js"></script>
 <script src="http://localhost/Lumi/webroot/js/slider.js"></script>
-
 
 </body></html>

@@ -1,5 +1,5 @@
-    <!--start: Container -->
-    <div class="container">
+<!--start: Container -->
+<div class="container">
 
         <!-- start: Flexslider -->
         <div class="slider">
@@ -55,17 +55,6 @@
                             </div>
                         </a>
                     </li>
-                    <li style="width: 100%; float: left; margin-right: -100%; position: relative; display: none;" class="">
-                        <img src="./webroot/img/services/06erp.png" alt="security">
-
-                        <a href="http://www.lumitel.ch">
-                            <div class="slide-caption">
-                                <h2>Alarme et code d'accès</h2>
-                            </div>
-                        </a>
-                    </li>
-
-
 
                 </ul>
             </div>
@@ -100,7 +89,7 @@
 
                         <div class="col-xs-8">
                             <h3>Dépannage 24h/24</h3>
-                            <p>Pour une panne à toute heure, n'hésitez pas à nous contacter, nous sommes à votre service pour tout incidence.</p>
+                            <p>Pour une panne à toute heure, n'hésitez pas à nous contacter. Nous sommes à votre service pour tout incidence.</p>
                         </div>
                         
                     </div>      
@@ -146,7 +135,7 @@
 
                         <div class="col-xs-8">
                             <h3>Votre partenaire de confiance</h3>
-                            <p>Doté d'une solide expérience de plus de dix ans au sein du réseau Genevois, l'entreprise ne cesse de croître son rayon d'activité dans les technologies existantes.</p>
+                            <p>Doté d'une solide expérience de plus de dix ans au sein du réseau Genevois, l'entreprise ne cesse de croître son rayon d'activité avec les technologies existantes.</p>
                         </div>
                         
                     </div>      

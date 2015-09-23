@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="http://localhost/Lumi/webroot/css/css(5)"> 
     <link rel="stylesheet" href="http://localhost/Lumi/webroot/css/bootstrap.css"> 
     <link rel="stylesheet" href="http://localhost/Lumi/webroot/css/bootstrap-responsive.css"> 
-    <link href="http://localhost/Lumi/webroot/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://localhost/Lumi/webroot/css/bootstrap.css" rel="stylesheet">
     <link href="http://localhost/Lumi/webroot/css/style.min.css" rel="stylesheet">
 
 
@@ -51,43 +51,62 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><i class="fa fa-code"></i> Sma<span>rt</span>.</a>
+                <a class="brand" href="index.php"><img src="./webroot/img/LogoLumitel.png" alt="logo"></a>
+                
             </div>
 
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="main-navigation">
+                <ul class="nav navbar-right navbar-nav">
+                    <li class="active dropdown">
+                        <a class="brand" href="<?php echo BASE_URL.'/'; ?>">Acceuil</a>
+                    </li>
 
-            <!--start: Navbar -->
-            <div class="navbar navbar-inverse navbar">
-                <div class="navbar-inner">
-                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                    </a>
 
-                    <a class="brand" href="<?php echo BASE_URL.'/'; ?>">Lumitel SA</a>
+                    <li ><a href="services.html">prestations</a></li>
+                    <li ><a href="pricing.html">réalisations</a></li>
+                    <li ><a href="blog.html">entreprise</a></li>
+                    <li ><a href="contact.html">contact</a></li>
 
-                    <div class="collapse navbar-collapse" id="main-navigation">
+<!--
+                    <?php $pagesMenu = $this->request('Pages', 'getMenu'); ?>
+                    <?php foreach($pagesMenu as $p):?>
+                          <li><a href="<?php echo BASE_URL.'/pages/view/'.$p->id; ?>" title="<?php echo $p->name; ?>"><?php echo $p->name; ?></a></li>
+                    <?php endforeach; ?>-->
+                    <li><a href="<?php echo Router::url('posts/index'); ?>">Actualité</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->    
 
-                        <ul class="nav navbar-right navbar-nav">
-                          <?php $pagesMenu = $this->request('Pages', 'getMenu'); ?>
-                          <?php foreach($pagesMenu as $p):?>
-                                <li><a href="<?php echo BASE_URL.'/pages/view/'.$p->id; ?>" title="<?php echo $p->name; ?>"><?php echo $p->name; ?></a></li>
-                          <?php endforeach; ?>
-                          <li><a href="<?php echo Router::url('posts/index'); ?>">Actualité</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!--end: Navbar -->
-            <div class="container"  style="padding-top:60px;">
-                <?php echo $this->Session->flash(); ?>
-            	<?php echo $content_for_layout; ?>
-            </div>
         </div>
         <!--end: Container-->
     </nav>
-    <!--end: Navbar -->     
 
+
+
+
+    <!--end: Navbar -->     
+    <!-- start: Page Title -->
+    <div id="page-title">
+
+        <div id="page-title-inner">
+
+            <!-- start: Container -->
+            <div class="container">
+
+                <h2><i class="fa "></i>Acceuil</h2>
+
+            </div>
+            <!-- end: Container  -->
+
+        </div>  
+
+    </div>
+    <!-- end: Page Title -->
+
+            <div class="container"  style="padding-top:60px;">
+                <?php echo $this->Session->flash(); ?>
+                <?php echo $content_for_layout; ?>
+            </div>
 
     <!-- start: Footer Menu -->
     <div id="footer-menu" class="hidden-sm hidden-xs">
@@ -227,8 +246,15 @@
 </div>
 <!-- end: Footer -->
 
+
+
+
 <!-- start: Copyright -->
 <div id="copyright">
+
+
+
+
 
     <!-- start: Container -->
     <div class="container">
@@ -243,6 +269,8 @@
     <!-- end: Container  -->
 
 </div>
+
+
 <!-- end: Copyright -->
 
 <script src="http://localhost/Lumi/webroot/js/bootstrap.min.js"></script>

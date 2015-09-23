@@ -87,7 +87,7 @@
         <div class="row">
 
             <!-- start: Icon Box Start -->
-            <div class="col-sm-6 col-md-4">
+            <div class="offset1 col-sm-6 col-md-4">
                 
                 <div class="icons-box vertical">
                     
@@ -99,8 +99,8 @@
                         </div>
 
                         <div class="col-xs-8">
-                            <h3>Easy to use</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            <h3>Dépannage 24h/24</h3>
+                            <p>Une panne à toute heure panne. N'hésitez pas à nous appeler pour toute incident électrique.</p>
                         </div>
                         
                     </div>      
@@ -111,7 +111,7 @@
             <!-- end: Icon Box-->
 
             <!-- start: Icon Box Start -->
-            <div class="col-sm-6 col-md-4">
+            <div class="offset1 col-sm-6 col-md-4">
                 
                 <div class="icons-box vertical">
                     
@@ -122,31 +122,8 @@
                         </div>
 
                         <div class="col-xs-8">
-                            <h3>Best choice</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-                        </div>
-                        
-                    </div>      
-
-                </div>
-                
-            </div>
-            <!-- end: Icon Box-->
-
-            <!-- start: Icon Box Start -->
-            <div class="col-sm-6 col-md-4">
-                
-                <div class="icons-box vertical">
-                    
-                    <div class="row">
-                        
-                        <div class="col-xs-4">
-                            <i class="fa fa-tablet circle full-color big"></i>
-                        </div>
-
-                        <div class="col-xs-8">
-                            <h3>Fully responsive</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            <h3>Courant fort</h3>
+                            <p>Notre entreprise est agréé courant fort. Notre forte expérience vous permet de nous confier en toute tranquilité vos installations électriques</p>
                         </div>
                         
                     </div>      

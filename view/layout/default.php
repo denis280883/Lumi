@@ -22,6 +22,10 @@
     <link rel="stylesheet" href="http://localhost/Lumi/webroot/css/css(5)"> 
     <link rel="stylesheet" href="http://localhost/Lumi/webroot/css/bootstrap.css"> 
     <link rel="stylesheet" href="http://localhost/Lumi/webroot/css/bootstrap-responsive.css"> 
+    <link href="http://localhost/Lumi/webroot/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://localhost/Lumi/webroot/css/style.min.css" rel="stylesheet">
+
+
 
      <link href="http://localhost/Lumi/webroot/css" rel="stylesheet" type="text/css">
     <!-- end: CSS -->
@@ -35,45 +39,45 @@
 <body> 
 
 
-<!--start: Header -->
-<header>
+    <!--start: Navbar -->
+    <nav class="navbar navbar-default" role="navigation">       
 
-    <!--start: Container -->
-    <div class="container">
+        <!--start: Container -->
+        <div class="container">
 
-        <!--start: Navbar -->
-        <div class="navbar navbar-inverse navbar">
-            <div class="navbar-inner">
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </a>
+            <!--start: Navbar -->
+            <div class="navbar navbar-inverse navbar">
+                <div class="navbar-inner">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </a>
 
-                <a class="brand" href="<?php echo BASE_URL.'/'; ?>">Lumitel SA</a>
+                    <a class="brand" href="<?php echo BASE_URL.'/'; ?>">Lumitel SA</a>
 
-                <div class="collapse navbar-collapse" id="main-navigation">
+                    <div class="collapse navbar-collapse" id="main-navigation">
 
-                    <ul class="nav navbar-right navbar-nav">
-                      <?php $pagesMenu = $this->request('Pages', 'getMenu'); ?>
-                      <?php foreach($pagesMenu as $p):?>
-                            <li><a href="<?php echo BASE_URL.'/pages/view/'.$p->id; ?>" title="<?php echo $p->name; ?>"><?php echo $p->name; ?></a></li>
-                      <?php endforeach; ?>
-                      <li><a href="<?php echo Router::url('posts/index'); ?>">Actualité</a></li>
-                    </ul>
+                        <ul class="nav navbar-right navbar-nav">
+                          <?php $pagesMenu = $this->request('Pages', 'getMenu'); ?>
+                          <?php foreach($pagesMenu as $p):?>
+                                <li><a href="<?php echo BASE_URL.'/pages/view/'.$p->id; ?>" title="<?php echo $p->name; ?>"><?php echo $p->name; ?></a></li>
+                          <?php endforeach; ?>
+                          <li><a href="<?php echo Router::url('posts/index'); ?>">Actualité</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            <!--end: Navbar -->
+            <div class="container"  style="padding-top:60px;">
+                <?php echo $this->Session->flash(); ?>
+            	<?php echo $content_for_layout; ?>
+            </div>
         </div>
-        <!--end: Navbar -->
-        <div class="container"  style="padding-top:60px;">
-            <?php echo $this->Session->flash(); ?>
-        	<?php echo $content_for_layout; ?>
-        </div>
-    </div>
-    <!--end: Container-->
+        <!--end: Container-->
+    </nav>
+    <!--end: Navbar -->     
 
-</header>
-<!--end: Header-->
 
 <!-- start: Footer -->
 <div id="footer">

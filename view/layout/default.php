@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" class="csstransforms csstransforms3d csstransitions js cssanimations csstransitions"> 
-<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<html lang="fr" class="csstransforms csstransforms3d csstransitions js cssanimations csstransitions"> 
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
 
     <meta charset="utf-8">
     <title><?php echo isset($title_for_layout)?$title_for_layout:'Lumitel SA - Entreprise Générale d’Electricité et Télécommunications'; ?></title>
@@ -22,18 +23,20 @@
     <link rel="stylesheet" href="http://localhost/Lumi/webroot/css/css(5)"> 
     <link rel="stylesheet" href="http://localhost/Lumi/webroot/css/bootstrap.css"> 
     <link rel="stylesheet" href="http://localhost/Lumi/webroot/css/bootstrap-responsive.css"> 
-    <link href="http://localhost/Lumi/webroot/css/bootstrap.css" rel="stylesheet">
     <link href="http://localhost/Lumi/webroot/css/style.min.css" rel="stylesheet">
+
+    <link href="http://localhost/Lumi/webroot/css/parallax-slider.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Boogaloo">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Economica:700,400italic">
 
 
 
      <link href="http://localhost/Lumi/webroot/css" rel="stylesheet" type="text/css">
     <!-- end: CSS -->
 
-    <!-- start: Script -->
-    <script type="text/javascript" src="http://localhost/Lumi/webroot/js/jquery-1.9.1.min.js"></script>
-    <script src="http://localhost/Lumi/webroot/js/custom.js"></script>
-    <!-- end: Script -->
+
 
 </head> 
 <body> 
@@ -63,17 +66,17 @@
                     </li>
 
 
-                    <li ><a href="services.html">prestations</a></li>
-                    <li ><a href="pricing.html">réalisations</a></li>
-                    <li ><a href="blog.html">entreprise</a></li>
-                    <li ><a href="contact.html">contact</a></li>
+                    <li ><a href="services.html">Prestations</a></li>
+                    <li ><a href="pricing.html">Réalisations</a></li>
+                    <li ><a href="blog.html">Entreprise</a></li>
+                    <li ><a href="contact.html">Contact</a></li>
 
 <!--
                     <?php $pagesMenu = $this->request('Pages', 'getMenu'); ?>
                     <?php foreach($pagesMenu as $p):?>
                           <li><a href="<?php echo BASE_URL.'/pages/view/'.$p->id; ?>" title="<?php echo $p->name; ?>"><?php echo $p->name; ?></a></li>
                     <?php endforeach; ?>-->
-                    <li><a href="<?php echo Router::url('posts/index'); ?>">Actualité</a></li>
+                    <li><a href="<?php echo Router::url('posts/index'); ?>">Actualités</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->    
 
@@ -159,6 +162,11 @@
                     </div>
                 
                 </div>
+
+
+
+                <!-- end: F
+
                 <!-- end: Footer Menu Back To Top -->
             
             </div>
@@ -272,11 +280,21 @@
 
 
 <!-- end: Copyright -->
-
-<script src="http://localhost/Lumi/webroot/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://localhost/Lumi/webroot/js/jquery-1.9.1.min.js"></script>
+<script src="http://localhost/Lumi/webroot/js/bootstrap.js"></script>
+<script src="http://localhost/Lumi/webroot/js/jquery.isotope.js"></script>
+<script src="http://localhost/Lumi/webroot/js/jquery.imagesloaded.js"></script>
 <script src="http://localhost/Lumi/webroot/js/flexslider.js"></script> 
 <script src="http://localhost/Lumi/webroot/js/carousel.js"></script>
+<script src="http://localhost/Lumi/webroot/js/jquery.cslider.js"></script>
 <script src="http://localhost/Lumi/webroot/js/slider.js"></script>
+<script src="http://localhost/Lumi/webroot/js/jquery.fancybox.js"></script>
 
+<script src="http://localhost/Lumi/webroot/js/excanvas.js"></script>
+<script src="http://localhost/Lumi/webroot/js/jquery.flot.js"></script>
+<script src="http://localhost/Lumi/webroot/js/jquery.flot.pie.min.js"></script>
+<script src="http://localhost/Lumi/webroot/js/jquery.flot.stack.js"></script>
+<script src="http://localhost/Lumi/webroot/js/jquery.flot.resize.min.js"></script>
 
+<script src="http://localhost/Lumi/webroot/js/custom.js"></script>
 </body></html>

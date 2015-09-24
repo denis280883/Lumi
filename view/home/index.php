@@ -67,7 +67,7 @@
 
         <div class="jumbotron">
             <h3>
-                Le choix d'une entreprise experte en électricité, télécommunication et sécurité
+                Le choix d'une entreprise experte en électricité, télécommunication
             </h3>
         </div><!--/.jumbotron-->
 
@@ -89,7 +89,7 @@
 
                         <div class="col-xs-8">
                             <h3>Dépannage 24h/24</h3>
-                            <p>Pour une panne à toute heure, n'hésitez pas à nous contacter. Nous sommes à votre service pour tout incidence.</p>
+                            <p>Pour une panne à toute heure, n'hésitez pas à nous contacter. Nous sommes à votre service pour toute incidence.</p>
                         </div>
                         
                     </div>      

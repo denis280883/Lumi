@@ -83,12 +83,16 @@
                     <div class="row">
                         
                         <div class="col-xs-4">
-                            <i class="fa fa-wrench circle full-color big"></i>
-
+                            <a href="pricing.html">
+                                <i class="fa fa-wrench circle full-color big"></i>
+                            </a>
                         </div>
 
                         <div class="col-xs-8">
-                            <h3>Dépannage 24h/24</h3>
+
+                            <a href="pricing.html">
+                                <h3>Dépannage 24h/24</h3>
+                            </a>
                             <p>Pour une panne à toute heure, n'hésitez pas à nous contacter. Nous sommes à votre service pour toute incidence.</p>
                         </div>
                         

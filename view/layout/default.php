@@ -79,8 +79,8 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="main-navigation">
                     <ul class="nav navbar-right navbar-nav">
-                        <li class="active dropdown">
-                            <a class="brand" href="<?php echo BASE_URL.'/'; ?>">Acceuil <?php echo debug($this->request->url); ?></a>
+                        <li <?php if($this->request->controller == 'home'){ echo 'class="active dropdown"';} ?>>
+                            <a class="brand" href="<?php echo BASE_URL.'/'; ?>">Acceuil</a>
                         </li>
                         <li >
                             <a href="services.html">Prestations</a>
@@ -92,12 +92,12 @@
 
                         <li ><a href="contact.html">Contact</a></li>
 
-    <!--
+    <!--class="brand"class="active dropdown"
                         <?php $pagesMenu = $this->request('Pages', 'getMenu'); ?>
                         <?php foreach($pagesMenu as $p):?>
                               <li><a href="<?php echo BASE_URL.'/pages/view/'.$p->id; ?>" title="<?php echo $p->name; ?>"><?php echo $p->name; ?></a></li>
                         <?php endforeach; ?>-->
-                        <li><a href="<?php echo Router::url('posts/index'); ?>">Actualités</a></li>
+                        <li <?php if($this->request->controller == 'posts'){ echo 'class="active dropdown"';} ?>><a href="<?php echo Router::url('posts/index'); ?>">Actualités</a></li>
 
                     </ul>
                 </div><!-- /.navbar-collapse -->    

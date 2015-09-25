@@ -153,6 +153,79 @@
         </div>
         <!-- end: Row -->   
 
+        <hr>
+        
+        <!-- start: Row -->
+        <div class="row">
+
+            <div class="col-sm-9">
+                
+                <div class="title"><h3>Dernières Actualités</h3></div>
+                
+                <!-- start: Row -->
+                <div class="row">
+        
+                    <div class="col-sm-4">
+
+                        <div class="picture">
+                            <a href="http://localhost:8888/bootstrap/smart2/img/car.jpg" rel="image" title="mobile app">
+                                <img src="assets/img/car.jpg" >
+                                <div class="image-overlay-zoom"></div>
+                            </a>
+                        </div>
+                        <div class="item-description">
+                            <h4><a href="index3.html#">Suppression téléphonie analogique</a></h4>
+                            <p>D'ici à fin 2017, tous les clients Swisscom devront utiliser la téléphonie par internet, a annoncé le numéro un suisse des télécommunications mardi. Près de 2 millions de Suisses téléphonent en analogique à ce jour.</p>
+                        </div>
+                
+                    </div>
+                
+                    <div class="col-sm-4">
+
+                        <div class="picture">
+                            <a href="project.html">
+                                <img src="assets/img/web_app1.jpg">
+                                <div class="image-overlay-link"></div>
+                            </a>
+                        </div>
+                        <div class="item-description">
+                            <h4><a href="index3.html#">Jusqu'à 50% d'économie d'électricité</a></h4>
+                            <p>Optiwatt : réduisez votre consommation d'électricité et recevez une prime</p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-4">
+
+                        <div class="picture">
+                            <a href="http://localhost:8888/bootstrap/smart2/img/mobile_app1.jpg" rel="image" title="mobile app">
+                                <img src="assets/img/mobile_app1.jpg">
+                                <div class="image-overlay-zoom"></div>
+                            </a>
+                        </div>
+                        <div class="item-description">
+                            <h4><a href="index3.html#">Surveillance</a></h4>
+                            <p>Gardez un oeil sur votre maison, bureau, commerce,... où que vous soyez dans le monde grâce à des caméras, relié à un enregistreur avec PC/Mac, smartphone, tablette...</p>
+                        </div>
+
+                    </div>
+
+                
+                </div>
+                <!-- end: Row -->
+
+            </div>
+
+                
+
+
+        </div>
+        <!-- end: Row -->
+
+
+        <hr>
+        <hr><hr><hr><hr>
+
         <hr></hr>
     
         <!-- start Clients List --> 

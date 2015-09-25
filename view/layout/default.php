@@ -126,7 +126,7 @@
                 <!-- start: Footer Menu Logo -->
                 <div class="col-sm-2">
                     <div id="footer-menu-logo">
-                        <a class="brand" href="index3.html#">Lumi<span>tel</span>.</a>
+                        <a class="brand" href="index3.html#">Lumitel SA</a>
                     </div>
                 </div>
                 <!-- end: Footer Menu Logo -->

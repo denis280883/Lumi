@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="http://localhost/Lumi/webroot/css/css(5)"> 
     <link rel="stylesheet" href="http://localhost/Lumi/webroot/css/bootstrap.css"> 
     <link rel="stylesheet" href="http://localhost/Lumi/webroot/css/bootstrap-responsive.css"> 
-    <link href="http://localhost/Lumi/webroot/css/style.min.css" rel="stylesheet">
+    <link href="http://localhost/Lumi/webroot/css/style.css" rel="stylesheet">
 
     <link href="http://localhost/Lumi/webroot/css/parallax-slider.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
@@ -41,70 +41,68 @@
 </head> 
 <body> 
 
+    <header class="navbar navbar-static-top bs-docs-nav">
 
-    <!--start: Navbar -->
-    <nav class="navbar navbar-default" role="navigation">       
-        <!--start: Container -->
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navigation">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="brand" href="index.php"><img src="./webroot/img/LogoLumitel.png" alt="logo"></a>
-                
+            <!-- Logo -->
+        <div class="navbar navbar-inverse" role="navigation">
+            <div class="navbar-inner">
+                <div class="nav-center">
+                        <img src="http://localhost/Lumi/webroot/img/logo.PNG" alt=""> 
+                </div>
             </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="main-navigation">
-                <ul class="nav navbar-right navbar-nav">
-                    <li class="active dropdown">
-                        <a class="brand" href="<?php echo BASE_URL.'/'; ?>">Acceuil</a>
-                    </li>
-
-
-                    <li ><a href="services.html">Prestations</a></li>
-                    <li ><a href="pricing.html">Réalisations</a></li>
-                    <li ><a href="blog.html">Entreprise</a></li>
-                    <li ><a href="contact.html">Contact</a></li>
-
-<!--
-                    <?php $pagesMenu = $this->request('Pages', 'getMenu'); ?>
-                    <?php foreach($pagesMenu as $p):?>
-                          <li><a href="<?php echo BASE_URL.'/pages/view/'.$p->id; ?>" title="<?php echo $p->name; ?>"><?php echo $p->name; ?></a></li>
-                    <?php endforeach; ?>-->
-                    <li><a href="<?php echo Router::url('posts/index'); ?>">Actualités</a></li>
-                </ul>
-            </div><!-- /.navbar-collapse -->    
-
         </div>
-        <!--end: Container-->
-    </nav>
+            <!-- //end Logo --> 
 
 
 
 
-    <!--end: Navbar -->     
-    <!-- start: Page Title -->
-    <div id="page-title">
 
-        <div id="page-title-inner">
-
-            <!-- start: Container -->
+        <!--start: Navbar -->
+        <nav class="navbar navbar-default" role="navigation">       
+            <!--start: Container -->
             <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navigation">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
 
-                <h2><i class="fa "></i>Acceuil</h2>
+                    
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="main-navigation">
+                    <ul class="nav navbar-right navbar-nav">
+                        <li class="active dropdown">
+                            <a class="brand" href="<?php echo BASE_URL.'/'; ?>">Acceuil</a>
+                        </li>
+
+
+                        <li ><a href="services.html">Prestations</a></li>
+                        <li ><a href="pricing.html">Réalisations</a></li>
+                        <li ><a href="blog.html">Entreprise</a></li>
+
+                        <li ><a href="contact.html">Contact</a></li>
+
+    <!--
+                        <?php $pagesMenu = $this->request('Pages', 'getMenu'); ?>
+                        <?php foreach($pagesMenu as $p):?>
+                              <li><a href="<?php echo BASE_URL.'/pages/view/'.$p->id; ?>" title="<?php echo $p->name; ?>"><?php echo $p->name; ?></a></li>
+                        <?php endforeach; ?>-->
+                        <li><a href="<?php echo Router::url('posts/index'); ?>">Actualités</a></li>
+
+                    </ul>
+                </div><!-- /.navbar-collapse -->    
 
             </div>
-            <!-- end: Container  -->
+            <!--end: Container-->
+        </nav>
+    </header>
 
-        </div>  
 
-    </div>
-    <!-- end: Page Title -->
 
             <div class="container"  style="padding-top:60px;">
                 <?php echo $this->Session->flash(); ?>

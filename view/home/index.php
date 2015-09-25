@@ -155,7 +155,9 @@
     
             <ul class="slides clients">
 
-                <li><img src="./webroot/img/partner/001_eco21.jpg" alt=""/></li>
+                <li>
+                    <a href="http://www.eco21.ch/" target="_blank"><img src="./webroot/img/partner/001_eco21.jpg" alt=""/></a>
+                </li>
                 <li><img src="./webroot/img/partner/002_osram_sylvania.jpg" alt=""/></li> 
                 <li><img src="./webroot/img/partner/003_electro_materiel.png" alt=""/></li> 
                 <li><img src="./webroot/img/partner/004_swisscom-logo.jpg" alt=""/></li> 

@@ -80,12 +80,14 @@
                 <div class="collapse navbar-collapse" id="main-navigation">
                     <ul class="nav navbar-right navbar-nav">
                         <li class="active dropdown">
-                            <a class="brand" href="<?php echo BASE_URL.'/'; ?>">Acceuil</a>
+                            <a class="brand" href="<?php echo BASE_URL.'/'; ?>">Acceuil <?php echo debug($this->request->url); ?></a>
                         </li>
-
-
-                        <li ><a href="services.html">Prestations</a></li>
-                        <li ><a href="pricing.html">Réalisations</a></li>
+                        <li >
+                            <a href="services.html">Prestations</a>
+                        </li>
+                        <li >
+                            <a href="pricing.html">Réalisations</a>
+                        </li>
                         <li ><a href="blog.html">Entreprise</a></li>
 
                         <li ><a href="contact.html">Contact</a></li>

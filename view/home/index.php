@@ -42,7 +42,7 @@
 
                         <a href="http://www.lumitel.ch">
                             <div class="slide-caption">
-                                <h2>Réseau informatique</h2>
+                                <h2>Câblage informatique</h2>
                             </div>
                         </a>
                     </li>

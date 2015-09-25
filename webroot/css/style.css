@@ -162,9 +162,8 @@ ul.disc {
 
 
 .navbar {
-  background: white;
-  background-image: url(http://localhost/Lumi/webroot/img/wpf0345af6.png);
-  border-bottom: 5px solid #f6f6f6 !important;
+  background: #2F2020;
+  border-bottom: 0px solid #f6f6f6 !important;
   min-height: 70px;
   border: none;
   -webkit-box-shadow: none;
@@ -205,7 +204,7 @@ ul.disc {
   color: #666666;
   border-top: 0px solid white;
   font-size: 16px;
-  padding: 22px;
+  padding: 23px;
   padding: 22px 15px \9;
 }
 .navbar-default .navbar-nav > li > a:hover,
@@ -217,8 +216,8 @@ ul.disc {
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  border-top: 4px solid #29a9df;
-  background: #29a9df;
+  border-top: 4px solid #D71C30;
+  background: #D71C30;
   color: white;
 }
 .navbar-default .navbar-nav > .active > a .caret,
@@ -651,7 +650,7 @@ html[xmlns] .slides {
 ====================================================================== */
 .jumbotron {
   background: #eee;
-  border-left: 4px solid #29a9df;
+  border-left: 4px solid #D71C30;
   padding: 13px 13px 13px 15px !important;
   font-style: italic;
   margin: 40px auto;
@@ -719,10 +718,10 @@ html[xmlns] .slides {
   font-size: 30px;
 }
 .icons-box i.color {
-  color: #29a9df;
+  color: #D71C30;
 }
 .icons-box i.full-color {
-  background: #29a9df;
+  background: #D71C30;
   color: white;
 }
 .icons-box i.bordered {
@@ -1950,7 +1949,7 @@ li.current {
   width: 30px;
   height: 30px;
   display: block;
-  background-color: #29a9df;
+  background-color: #D71C30;
   background-image: url(../img/scroll-top-top.png);
   background-repeat: no-repeat;
   background-position: 50%;

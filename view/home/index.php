@@ -76,31 +76,32 @@
         <div class="row">
 
             <!-- start: Icon Box Start -->
-            <div class="col-sm-6 col-md-4">
-                
-                <div class="icons-box vertical">
+            <a href="pricing.html">
+                <div class="col-sm-6 col-md-4">
                     
-                    <div class="row">
+                    <div class="icons-box vertical">
                         
-                        <div class="col-xs-4">
-                            <a href="pricing.html">
+                        <div class="row">
+                            
+                            <div class="col-xs-4">
                                 <i class="fa fa-wrench circle full-color big"></i>
-                            </a>
-                        </div>
+                            </div>
 
-                        <div class="col-xs-8">
+                            <div class="col-xs-8">
 
-                            <a href="pricing.html">
-                                <h3>Dépannage 24h/24</h3>
-                            </a>
-                            <p>Pour une panne à toute heure, n'hésitez pas à nous contacter. Nous sommes à votre service pour toute incidence.</p>
-                        </div>
-                        
-                    </div>      
+                                
+                                    <h3>Dépannage 24h/24</h3>
+                                
+                                    <p>Pour une panne à toute heure, n'hésitez pas à nous contacter. Nous sommes à votre service pour toute incidence.</p>
+                               
+                            </div>
+                            
+                        </div>      
 
+                    </div>
+                    
                 </div>
-                
-            </div>
+             </a>
             <!-- end: Icon Box-->
 
             <!-- start: Icon Box Start -->

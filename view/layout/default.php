@@ -80,7 +80,7 @@
                 <div class="collapse navbar-collapse" id="main-navigation">
                     <ul class="nav navbar-right navbar-nav">
                         <li <?php if($this->request->controller == 'home'){ echo 'class="active dropdown"';} ?>>
-                            <a class="brand" href="<?php echo BASE_URL.'/'; ?>">Acceuil</a>
+                            <a href="<?php echo BASE_URL.'/'; ?>">Acceuil</a>
                         </li>
                         <li >
                             <a href="services.html">Prestations</a>

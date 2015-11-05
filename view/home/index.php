@@ -169,7 +169,7 @@
 
                         <div class="picture">
                             <a href="http://localhost:8888/bootstrap/smart2/img/car.jpg" rel="image" title="mobile app">
-                                <img src="assets/img/car.jpg" >
+                                <img src="./webroot/img/news/2015-09-29/4471468.jpg" >
                                 <div class="image-overlay-zoom"></div>
                             </a>
                         </div>
@@ -184,7 +184,7 @@
 
                         <div class="picture">
                             <a href="project.html">
-                                <img src="assets/img/web_app1.jpg">
+                                <img src="./webroot/img/news/2015-09-29/eco21 50.PNG">
                                 <div class="image-overlay-link"></div>
                             </a>
                         </div>
@@ -199,7 +199,7 @@
 
                         <div class="picture">
                             <a href="http://localhost:8888/bootstrap/smart2/img/mobile_app1.jpg" rel="image" title="mobile app">
-                                <img src="assets/img/mobile_app1.jpg">
+                                <img src="./webroot/img/news/2015-09-29/campage1-img3.jpg">
                                 <div class="image-overlay-zoom"></div>
                             </a>
                         </div>
@@ -216,11 +216,53 @@
 
             </div>
 
+                        <div class="col-sm-3">
                 
+                <!-- start: Testimonials-->
+
+                <div class="testimonial-container">
+
+                    <div class="title"><h3>Avis des clients</h3></div>
+
+                        <div class="testimonials-carousel" data-autorotate="3000">
+
+                            <ul class="carousel">
+
+                                <li class="testimonial">
+                                    <div class="testimonials">Ayant eu besoin d’un électricien spécialiste courant fort pour réparer une prise électrique, Lumitel a été efficace au niveau de la rapidité de l’intervention et des démarches administratifs pour la régie. Je ne peux que le recommander. </div>
+                                    <div class="testimonials-bg"></div>
+                                    <div class="testimonials-author">Denis, <span>locataire</span></div>
+                                </li>
+
+                                <li class="testimonial">
+                                    <div class="testimonials">Non seulement il est l'électricien de notre villa, mais il est également spécialiste dans divers domaine tels que la surveillance avec des caméras, où nous en sommes équipé avec un accès depuis nos smartphones.</div>
+                                    <div class="testimonials-bg"></div>
+                                    <div class="testimonials-author">Nicole, <span>client</span></div>
+                                </li>
+
+                                <li class="testimonial">
+                                    <div class="testimonials">Client depuis plus de 10 ans. Malgré que l'entreprise soit souvent débordée, nous sommes enchantés des services fournis et du professionalisme.</div>
+                                    <div class="testimonials-bg"></div>
+                                    <div class="testimonials-author">Genaoui, <span>client</span></div>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                <!-- end: Testimonials-->
+                
+            </div>
+
+
 
 
         </div>
         <!-- end: Row -->
+
+
 
 
         <hr>

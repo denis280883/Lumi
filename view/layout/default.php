@@ -50,7 +50,7 @@
         <div class="navbar navbar-inverse" role="navigation">
             <div class="navbar-inner">
                 <div class="nav-center">
-                        <img src="http://localhost/Lumi/webroot/img/logo.PNG" alt=""> 
+                        <img src="http://localhost/Lumi/webroot/img/logo_sm2.PNG" alt=""> 
                 </div>
             </div>
         </div>

@@ -137,6 +137,7 @@ ul.disc {
 .nav-center {
     margin:0;
     float:none;
+    background-color: #CBD8E1;
 }
 
 .navbar-inner{
@@ -389,8 +390,7 @@ ul.disc {
   margin-bottom: 20px;
 }
 .picture img {
-  width: 100%;
-  height: auto;
+  height: 120px;
 }
 .image-overlay-link,
 .image-overlay-zoom {
@@ -927,13 +927,13 @@ input[type="button"] {
   margin-top: -40px;
 }
 .mr-rotato-next {
-  background: url(../img/testimonials-right-01.png) no-repeat 50%;
+  background: url(http://localhost/Lumi/webroot/img/testimonials-right-01.png) no-repeat 50%;
   background-color: white;
   right: -1px;
   z-index: 6;
 }
 .mr-rotato-prev {
-  background: url(../img/testimonials-left-01.png) no-repeat 50%;
+  background: url(http://localhost/Lumi/webroot/img/testimonials-left-01.png) no-repeat 50%;
   background-color: white;
   right: 25px;
   -webkit-box-shadow: 3px 0px 0px 0px #ffffff;
@@ -942,10 +942,10 @@ input[type="button"] {
   z-index: 5;
 }
 .mr-rotato-next:hover {
-  background: url(../img/testimonials-right-02.png) no-repeat 50%;
+  background: url(http://localhost/Lumi/webroot/img/testimonials-right-02.png) no-repeat 50%;
 }
 .mr-rotato-prev:hover {
-  background: url(../img/testimonials-left-02.png) no-repeat 50%;
+  background: url(http://localhost/Lumi/webroot/img/testimonials-left-02.png) no-repeat 50%;
 }
 .mr-rotato-prev:hover,
 .mr-rotato-next:hover {
